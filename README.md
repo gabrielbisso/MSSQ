@@ -1,13 +1,19 @@
 # Repositório do Projeto MSSQ no GitHub
 
 <p align="center">
- <a href="#JustificativadoProjeto">Justificativa</a> •
+ <a href="#JustificativadoProjeto" text-decoration: none>Justificativa</a> •
  <a href="#ObjetivodoProjeto">Objetivo</a> • 
  <a href="#StakeHolders">StakeHolders</a> • 
  <a href="#EquipedeDesenvolvedores">Equipe de Desenvolvedores</a> • 
  <a href="#Issues">Issues</a> • 
  <a href="#Code">Code</a>
 </p>
+
+[![GitHub license](https://img.shields.io/github/license/gabrielbisso/MSSQ.svg)](https://github.com/gabrielbisso/MSSQ/blob/main/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/gabrielbisso/MSSQ.svg)](https://github.com/gabrielbisso/MSSQ/graphs/contributors)
+[![GitHub issues](https://badgen.net/github/issues/gabrielbisso/MSSQ/)](https://github.com/gabrielbisso/MSSQ/issues)
+[![GitHub issues](https://img.shields.io/github/issues/gabrielbisso/MSSQ.svg)](https://github.com/gabrielbisso/MSSQ/issues)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/gabrielbisso/MSSQ.svg)](https://github.com/gabrielbisso/MSSQ/issues?q=is%3Aissue+is%3Aclosed)
 
 <h2 id=JustificativadoProjeto>Justificativa do Projeto</h2>
 
