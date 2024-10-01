@@ -15,7 +15,7 @@
 ## Objetivo do Projeto
 > O projeto tem por objetivo a otimização de tempo para realização de um formulário acerca dos efeitos das motion sickness em participantes de um estudo, além disso, através do desenvolvimento do projeto objetivamos a redução de erros relacionados ao não preenchimento de questões, código de participante ou demais tópicos que podem interferir nos resultados da pesquisa. Ainda, espera-se que o site a ser desenvolvido seja intuitivo e de fácil utilização pelos aplicadores da pesquisa, considerando um conhecimento prévio básico de tecnologia. Para garantir o melhor proveito dos dados coletados, pretende-se ofertar uma interface clara com a análise das informações coletadas por grupo e individualmente.
 
-## StakeHolders(#roadramp)
+## StakeHolders(#roadmap)
 > - Rosirene Gessinger/Cliente: [Lattes](http://lattes.cnpq.br/5099430297454399) / [Linkedin](https://www.linkedin.com/in/rosirene-gessinger-8a0921145/) 
 > - Juliana Herbert/Facilitadora:[Lattes](http://lattes.cnpq.br/7180951922379856) / [Linkedin](https://www.linkedin.com/in/julianaherbert/)
 
