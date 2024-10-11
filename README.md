@@ -3,9 +3,10 @@
 <p align="center">
  <a href="#JustificativadoProjeto" text-decoration: none>Justificativa</a> •
  <a href="#ObjetivodoProjeto">Objetivo</a> • 
+ <a href="#ODSs">Sustentabilidade</a> •
  <a href="#StakeHolders">StakeHolders</a> • 
  <a href="#EquipedeDesenvolvedores">Equipe de Desenvolvedores</a> • 
-  <a href="#PPlanodeComunicação">Plano de Comunicação</a> • 
+  <a href="#PlanodeComunicação">Plano de Comunicação</a> • 
  <a href="#Issues">Issues</a> • 
  <a href="#Code">Code</a>
 </p>
@@ -24,10 +25,16 @@
 
 > O projeto tem por objetivo a otimização de tempo para realização de um formulário acerca dos efeitos das motion sickness em participantes de um estudo, além disso, através do desenvolvimento do projeto objetivamos a redução de erros relacionados ao não preenchimento de questões, código de participante ou demais tópicos que podem interferir nos resultados da pesquisa. Ainda, espera-se que o site a ser desenvolvido seja intuitivo e de fácil utilização pelos aplicadores da pesquisa, considerando um conhecimento prévio básico de tecnologia. Para garantir o melhor proveito dos dados coletados, pretende-se ofertar uma interface clara com a análise das informações coletadas por grupo e individualmente.
 
+<h2 id=ODSs>ODSs e Sustentabilidade</h2>
+
+> O projeto cumpre com as seguintes ODSs
+> - Objetivo 3: Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades, já que o site que estamos desenvolvendo para o experimento de motion sickness realizado com pessoas de idades diversas visa entender os efeitos da motion sickness para que passageiros durante as viagens tenham um melhor bem-estar.
+> - Objetivo 5:  Alcançar a igualdade de gênero, uma vez que na atualidade a maior parte dos dados sobre motion sickness são sobre o sexo masculino. Porém, nesse experimento, tanto mulheres quanto homens terão seus dados coletados. 
+
 <h2 id=StakeHolders>StakeHolders</h2>
 
-> - Rosirene Gessinger/Cliente: [Lattes](http://lattes.cnpq.br/5099430297454399) / [Linkedin](https://www.linkedin.com/in/rosirene-gessinger-8a0921145/) 
-> - Juliana Herbert/Facilitadora:[Lattes](http://lattes.cnpq.br/7180951922379856) / [Linkedin](https://www.linkedin.com/in/julianaherbert/)
+> - Rosirene Gessinger/Cliente/Product Owner: [Lattes](http://lattes.cnpq.br/5099430297454399) / [Linkedin](https://www.linkedin.com/in/rosirene-gessinger-8a0921145/) 
+> - Juliana Herbert/Facilitadora/Scrum Master:[Lattes](http://lattes.cnpq.br/7180951922379856) / [Linkedin](https://www.linkedin.com/in/julianaherbert/)
 
 <h2 id=EquipedeDesenvolvedores>Equipe de Desenvolvedores</h2>
 
@@ -39,7 +46,8 @@
 > - Maria Eduarda Gonzalez:[Lattes](http://lattes.cnpq.br/5611144317721014) / [Linkedin](https://www.linkedin.com/in/meagonzalez/)
 
 <h2 id=Plano de Comunicação>Plano de Comunicação</h2>
-> A comunicação entre a equipe de desenvolvimento e a cliente será pelo Whatsapp para resolver dúvidas rápidas. Para um alinhamento de ideias mais complexo, serão feitas reuniões no Google Meet com a equipe de desenvolvimento e a cliente de 15 em 15 dias, assim, será possível que atualizemos a clietne sobre o andamento do projeto, recebamos sua aprovação e sugestões de melhorias e modificações no projeto. 
+
+> A comunicação entre a equipe de desenvolvimento e a cliente será feita pelo Whatsapp para resolver dúvidas rápidas. Para um alinhamento de ideias mais complexo, serão feitas reuniões no Google Meet com a equipe de desenvolvimento e a cliente de 15 em 15 dias, assim, será possível que atualizemos a cliente sobre o andamento do projeto, recebamos sua aprovação e sugestões de melhorias e modificações no projeto. 
 
 
 ## Estrutura do Repositório
