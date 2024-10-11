@@ -5,6 +5,7 @@
  <a href="#ObjetivodoProjeto">Objetivo</a> • 
  <a href="#StakeHolders">StakeHolders</a> • 
  <a href="#EquipedeDesenvolvedores">Equipe de Desenvolvedores</a> • 
+  <a href="#PPlanodeComunicação">Plano de Comunicação</a> • 
  <a href="#Issues">Issues</a> • 
  <a href="#Code">Code</a>
 </p>
@@ -36,6 +37,9 @@
 > - Mariana Koerber:[Lattes](http://lattes.cnpq.br/2780488877714917) / [Linkedin](https://www.linkedin.com/in/marianakoerber/)
 > - Maria Virginia Souza:[Lattes](http://lattes.cnpq.br/2220041455052899) / [Linkedin](https://www.linkedin.com/in/maria-virginia-souza-5581b2263/)
 > - Maria Eduarda Gonzalez:[Lattes](http://lattes.cnpq.br/5611144317721014) / [Linkedin](https://www.linkedin.com/in/meagonzalez/)
+
+<h2 id=Plano de Comunicação>Plano de Comunicação</h2>
+> A comunicação entre a equipe de desenvolvimento e a cliente será pelo Whatsapp para resolver dúvidas rápidas. Para um alinhamento de ideias mais complexo, serão feitas reuniões no Google Meet com a equipe de desenvolvimento e a cliente de 15 em 15 dias, assim, será possível que atualizemos a clietne sobre o andamento do projeto, recebamos sua aprovação e sugestões de melhorias e modificações no projeto. 
 
 
 ## Estrutura do Repositório
