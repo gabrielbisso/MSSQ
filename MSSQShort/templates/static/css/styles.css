@@ -1,0 +1,141 @@
+	/* Coded with love by Mutiullah Samim */
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #60a3bc !important;
+    }
+    .user_card {
+        height: 400px;
+        width: 350px;
+        margin-top: auto;
+        margin-bottom: auto;
+        background: #f39c12;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+
+    }
+    .brand_logo_container {
+        position: absolute;
+        height: 170px;
+        width: 170px;
+        top: -75px;
+        border-radius: 50%;
+        background: #60a3bc;
+        padding: 10px;
+        text-align: center;
+    }
+    .brand_logo {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+    .form_container {
+        margin-top: 100px;
+    }
+    .login_btn {
+        width: 100%;
+        background: #c0392b !important;
+        color: white !important;
+    }
+    .login_btn:focus {
+        box-shadow: none !important;
+        outline: 0px !important;
+    }
+    .login_container {
+        padding: 0 2rem;
+    }
+    .input-group-text {
+        background: #c0392b !important;
+        color: white !important;
+        border: 0 !important;
+        border-radius: 0.25rem 0 0 0.25rem !important;
+    }
+    .input_user,
+    .input_pass:focus {
+        box-shadow: none !important;
+        outline: 0px !important;
+    }
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+        background-color: #c0392b !important;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column; /* Coloca o logo e os botões em linhas separadas */
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #768CBD;
+        box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.1);
+        
+    }
+    
+    .container_logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px; /* Espaço entre o logo e os botões */
+    }
+    
+    #logo_topo {
+        padding-top: 2%;
+        width: 15%; 
+    }
+    
+    .button_container {
+        display: right;
+ 
+        gap: 20px; /* Espaçamento entre os botões */
+    }
+
+    .button_questionario {
+        display: flex;
+        justify-content: center; /* Centraliza os botões horizontalmente */
+        gap: 20px; /* Espaçamento entre os botões */
+        padding-top: 2%;
+        
+        
+    }
+    
+    .div_button {
+        display: right;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        cursor: pointer;
+        transition: color 0.3s;
+        border: 2px solid whitesmoke;
+        border-radius: 5px 
+        
+    }
+
+    .button_questionario a {
+        background-color: lightblue; /* Cor de fundo para o botão Começar questionário */
+    }
+
+    .button_container a {
+        background-color: lightblue; /* Cor de fundo para o botão Começar questionário */
+        padding-bottom: 1%;
+    }
+
+#introducao{
+
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-top: 1%;
+    
+    }
+
+.texto-destaque {
+        font-size: 3em; /* Aumenta a fonte para 1.5x o tamanho padrão */
+}
+

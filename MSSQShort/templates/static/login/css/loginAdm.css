@@ -1,0 +1,28 @@
+body{
+    background-color: #052f888c;
+}
+
+.imagemlogo{
+    width: 400px; 
+    height: 200px; 
+    margin-top: 50px; 
+    margin-bottom: 50px;
+}
+
+#icone{
+    background-color: #04153b;
+}
+
+#iconedentro{
+    color:white;
+}
+
+#formulario{
+    background-color: #04153b; 
+    color:white;
+}
+
+#botao{
+    background-color: #04153b; 
+    color: white;
+}
