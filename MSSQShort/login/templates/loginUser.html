@@ -33,16 +33,16 @@
 					{% endif %}
 					<div class="d-flex justify-content-center form_container">
 						<form action = "{% url 'loginUser' %}" method = "POST">{% csrf_token %}
-							<div class="input-group mb-3">
+							<p><div class="input-group mb-3">
 								<div class="input-group-append">
 									<span class="input-group-text" id="icone"><i id="iconedentro" class="fas fa-user"></i></span>
 								</div>
 								<input type="text" name="credencial" class="form-control input_user" id="formulario" value="" placeholder="Digite sua credencial">
 							</div>
 							<div class="input-group mb-2">
-								<p class="ajuste"><input type="checkbox" id="checkbox" name="checkbox"/>
-                                <label for="checkbox" class="termo">Eu li e concordo com o termos de uso</label></p>
-							</div>
+								<p><input type="checkbox" id="checkbox" name="checkbox"/>
+                                <label for="checkbox" class="termo">Eu li e concordo com o Termos de Uso</label></p>
+							</div></p>
 							<div class="d-flex justify-content-center mt-3 login_container">
 								<button type="submit" name="button" class="btn login_btn" id="botao">Iniciar Pesquisa</button>
 							</div>
