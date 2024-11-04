@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib import messages
 
 
 def login_Adm(request):
@@ -14,4 +15,5 @@ def login_Adm(request):
             return HttpResponse("Você foi logado com sucesso")
 
         elif usuario != "Admin" or senha != "12345":
-            return HttpResponse("Você não tem cadastro moreh")
+            messages.error(request, "Usuário ou senha incorretos")
+            return render(request, 'loginAdm.html')
