@@ -17,3 +17,14 @@ def login_Adm(request):
         elif usuario != "Admin" or senha != "12345":
             messages.error(request, "Usuário ou senha incorretos")
             return render(request, 'loginAdm.html')
+
+
+def login_User(request):
+    if request.method == "GET":
+        return render(request, 'loginuser.html')
+
+    elif request.method == "POST":
+        credencial = request.POST.get('credencial')
+
+        if credencial == "teste":
+            return HttpResponse("Você foi logado com sucesso")
