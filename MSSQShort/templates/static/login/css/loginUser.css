@@ -27,6 +27,15 @@ body{
     color: white;
 }
 
+#checkbox{
+    text-align: center;
+}
+
 .termo{
     color: white;
+}
+
+.divbot{
+    text-align: center;
+    margin-top: 30px;
 }

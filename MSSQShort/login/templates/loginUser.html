@@ -38,16 +38,13 @@
 									<span class="input-group-text" id="icone"><i id="iconedentro" class="fas fa-user"></i></span>
 								</div>
 								<input type="text" name="credencial" class="form-control input_user" id="formulario" value="{{ credencial }}" placeholder="Digite sua credencial">
-							</div>
-							<div class="input-group mb-2">
-								<p><input type="checkbox" id="checkbox" name="checkbox"/>
-                                <label for="checkbox" class="termo">Eu li e concordo com o Termos de Uso</label></p>
 							</div></p>
-							<div>
+							<div class="divbot">
 									<button type="submit" name="button" class="btn login_btn" id="botao"> Submeter Credencial</button>
-							</div>
+							</div></p>
+							<p></p>	
 							<div class="d-flex justify-content-center mt-3 login_container">
-								<p>
+								<p class="divbot">
 									<button type="submit" name="button" class="btn login_btn" id="botao" {% if disable_button1 %}disabled{% endif %}>Questionário 1</button>
 									<button type="submit" name="button" class="btn login_btn" id="botao" {% if disable_button2 %}disabled{% endif %}>Questionário 2</button>
 									<button type="submit" name="button" class="btn login_btn" id="botao" {% if disable_button3 %}disabled{% endif %}>Questionário 3</button>
