@@ -1,0 +1,100 @@
+body{
+    background-color: #AAC1F2;
+}
+
+.primeiroh1 {
+    font-family: 'Antonio', sans-serif;
+    color: #04153B;
+    font-weight: bold;
+    font-size: 50px; 
+    text-align: center;
+    margin-top: 25px;
+  }
+
+.explicacaop {
+    font-family: 'Inter', sans-serif;
+    color: #04153B;
+    font-size: 25px;  
+    text-align: justify;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.idadep{
+    font-family: 'Antonio', sans-serif;
+    color: #04153B;
+    font-size: 25px; 
+    margin-left: 25px;
+}
+
+.idadel{
+    font-family: 'Inter', sans-serif;
+    color: #04153B;
+    font-size: 20px; 
+    margin-left: 70px;
+}
+
+.sexo{
+    font-family: 'Antonio', sans-serif;
+    color: #04153B;
+    font-size: 25px; 
+    margin-left: 25px;
+
+}
+
+.sexol{
+    font-family: 'Inter', sans-serif;
+    color: #04153B;
+    font-size: 20px; 
+    margin-left: 50px;
+}
+
+.pergunta{
+    font-family: 'Antonio', sans-serif;
+    color: #04153B;
+    font-size: 26px; 
+    margin-left: 25px;
+}
+
+.opcao{
+    font-family: 'Inter', sans-serif;
+    color: #04153B;
+    font-size: 25px; 
+    margin-left: 50px;
+}
+
+.explicacao10{
+    font-family: 'Inter', sans-serif;
+    color: #04153B;
+    font-size: 25px; 
+    margin-right: 25px;
+    margin-left: 25px; 
+}
+
+.divbot{
+    text-align: right;
+    margin-top: 30px;
+}
+
+#botao{
+    background-color: #04153b; 
+    color: white;
+    margin-right: 50px;
+}
+
+
+.header {
+    background-color: #04153b;
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 80px;
+    font: 400 35px Inter, sans-serif;
+  }
+
+
