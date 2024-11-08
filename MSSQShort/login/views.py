@@ -28,7 +28,11 @@ def login_User(request):
     elif request.method == "POST":
         credencial = request.POST.get('credencial')
 
-        if credencial == "0":
+        if credencial == "":
+            disable_button = True
+            return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_button, 'disable_button3': disable_button, 'credencial': credencial})
+
+        elif credencial == "0":
             disable_buttonfalse = False
             disable_button = True
             return render(request, 'loginUser.html', {'disable_button1': disable_buttonfalse, 'disable_button2': disable_button, 'disable_button3': disable_button, 'credencial': credencial})
