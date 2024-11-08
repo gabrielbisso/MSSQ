@@ -21,10 +21,21 @@ def login_Adm(request):
 
 def login_User(request):
     if request.method == "GET":
-        return render(request, 'loginuser.html')
+        return render(request, 'loginUser.html')
 
     elif request.method == "POST":
         credencial = request.POST.get('credencial')
 
-        if credencial == "teste":
-            return HttpResponse("Você foi logado com sucesso")
+        if credencial == "0":
+            return render(request, 'loginUser.html', {'credencial': credencial})
+
+        elif credencial == "1":
+            disable_button = True
+            return render(request, 'loginUser.html', {'disable_button1': disable_button, 'credencial': credencial})
+
+        elif credencial == "2":
+            disable_button = True
+            return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_button, 'credencial': credencial})
+
+        elif credencial == "3":
+            return HttpResponse("Você já preencheu todos os questionários")
