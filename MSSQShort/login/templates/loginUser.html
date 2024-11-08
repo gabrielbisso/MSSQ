@@ -13,8 +13,8 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 		<link rel="icon" href="{% static 'login/img/logotransparente.png' %}"  type="image/png"> 
 		<link rel='stylesheet' href="{% static 'login/css/loginUser.css' %}">
+		<script src="{% static 'login/js/loginUser.js' %}"></script>
 	</head>
-
 	<body>
 		<p></p>
 		<p></p>
@@ -45,9 +45,13 @@
 							<p></p>	
 							<div class="d-flex justify-content-center mt-3 login_container">
 								<p class="divbot">
-									<button type="submit" name="button" class="btn login_btn" id="botao" {% if disable_button1 %}disabled{% endif %}>Questionário 1</button>
-									<button type="submit" name="button" class="btn login_btn" id="botao" {% if disable_button2 %}disabled{% endif %}>Questionário 2</button>
-									<button type="submit" name="button" class="btn login_btn" id="botao" {% if disable_button3 %}disabled{% endif %}>Questionário 3</button>
+
+									<button type="submit" name="button" class="btn login_btn" id="botao" {% if disable_button1 %}disabled{% endif %} onclick="chamarq1()">Questionário 1</button>
+									
+									<button type="submit" name="button" class="btn login_btn" id="botao" {% if disable_button2 %}disabled{% endif %} onclick="chamarq2()">Questionário 2</button>
+
+									<button type="submit" name="button" class="btn login_btn" id="botao" {% if disable_button3 %}disabled{% endif %} >Questionário 3</button>
+									
 								</p>
 							</div>
 						</form>

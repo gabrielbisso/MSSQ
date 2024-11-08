@@ -45,3 +45,11 @@ def login_User(request):
 
         elif credencial == "3":
             return HttpResponse("Você já preencheu todos os questionários")
+
+
+def quest1(request):
+    return render(request, 'questionario1.html')
+
+
+def quest2(request):
+    return render(request, 'questionario2.html')
