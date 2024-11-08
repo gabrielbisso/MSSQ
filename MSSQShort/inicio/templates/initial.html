@@ -1,0 +1,356 @@
+<style>
+  .motion-test-container {
+    background-color: #aac1f2;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+  }
+  .header {
+    background-color: #04153b;
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 80px;
+    font: 400 35px Inter, sans-serif;
+  }
+  .login-btn {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    border-radius: 8px;
+    background-color: #1c3875;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 13px 16px 0;
+    border: 1px solid transparent;
+  }
+  .logo {
+    aspect-ratio: 1.68;
+    object-fit: contain;
+    object-position: center;
+    width: 484px;
+    margin-top: 76px;
+    max-width: 100%;
+  }
+  .main-title {
+    color: #04153b;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin-top: 98px;
+    font: 700 70px Antonio, sans-serif;
+    border: 1px solid transparent;
+  }
+  .start-btn {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    background-color: #04153b;
+    margin-top: 94px;
+    width: 455px;
+    max-width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 24px 32px 15px;
+    font: 600 35px Inter, sans-serif;
+    border: 1px solid transparent;
+  }
+  .section-title {
+    color: #04153b;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin-top: 118px;
+    font: 600 50px Antonio, sans-serif;
+    border: 1px solid transparent;
+  }
+  .section-description {
+    color: #04153b;
+    margin-top: 25px;
+    font: 400 30px Inter, sans-serif;
+  }
+  .ideator-title {
+    color: #04153b;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin-top: 133px;
+    font: 600 50px Antonio, sans-serif;
+    border: 1px solid transparent;
+  }
+  .ideator-description {
+    color: #000;
+    margin-top: 23px;
+    font: 400 30px Inter, sans-serif;
+  }
+  .objective-title {
+    color: #04153b;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin-top: 108px;
+    font: 600 50px Antonio, sans-serif;
+    border: 1px solid transparent;
+  }
+  .objective-description {
+    color: #000;
+    margin-top: 23px;
+    font: 400 30px Inter, sans-serif;
+  }
+  .team-section {
+    background-color: #1c3875;
+    align-self: stretch;
+    display: flex;
+    margin-top: 134px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 82px 80px;
+  }
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-title {
+    color: #fff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    align-self: center;
+    margin-left: 23px;
+    font: 600 50px Antonio, sans-serif;
+    border: 1px solid transparent;
+  }
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .member-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+  .member-col {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+  }
+  .member-avatar {
+    background-color: #04153b;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+  }
+  .member-name {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font: 400 20px Inter, sans-serif;
+  }
+  .logo-ufcspa {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .project-description {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font: 400 18px Inter, sans-serif;
+  }
+  .footer {
+    background-color: #04153b;
+    align-self: stretch;
+    display: flex;
+    min-height: 148px;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .header {
+      max-width: 100%;
+      padding-left: 20px;
+    }
+    .login-btn {
+      padding-left: 20px;
+    }
+    .logo {
+      margin-top: 40px;
+    }
+    .main-title {
+      max-width: 100%;
+      margin-top: 40px;
+      font-size: 40px;
+    }
+    .start-btn {
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+    .section-title {
+      max-width: 100%;
+      margin-top: 40px;
+      font-size: 40px;
+    }
+    .section-description {
+      max-width: 100%;
+    }
+    .ideator-title {
+      max-width: 100%;
+      margin-top: 40px;
+      font-size: 40px;
+    }
+    .ideator-description {
+      max-width: 100%;
+    }
+    .objective-title {
+      max-width: 100%;
+      margin-top: 40px;
+      font-size: 40px;
+    }
+    .objective-description {
+      max-width: 100%;
+    }
+    .team-section {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+    .team-members {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+    .member-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .member-col {
+      width: 100%;
+    }
+    .member-avatar {
+      margin-top: 27px;
+    }
+    .member-name {
+      margin-top: 40px;
+    }
+    .project-description {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+    .footer {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<main class="motion-test-container">
+  <header class="header">
+    <button class="login-btn">Login | Admin</button>
+  </header>
+
+  <img
+    src="https://cdn.builder.io/api/v1/image/assets/TEMP/54cb28b31242bde04c9dc771e3c1b5bb2d1f503ae5889d6c05f9df14c1650ef9?placeholderIfAbsent=true&apiKey=ca76908c09d645f09c52cbff3ba78418 [cdn.builder.io]"
+    alt="Motion Sickness Test Logo"
+    class="logo"
+  />
+
+  <h1 class="main-title">Teste de Motion Sickness</h1>
+
+  <button class="start-btn">Começar questionário</button>
+
+  <section>
+    <h2 class="section-title">O que é MSSQ-Short?</h2>
+    <p class="section-description">
+      A presente pesquisa tem como objetivo avaliar a intensidade do
+      motion-sickness (sensação de enjoo) em pessoas que foram expostas à
+      simulação da gravidade da Lua e de Marte, além de avaliar também a
+      motion-sickness durante a infância.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="ideator-title">Idealizadora</h2>
+    <p class="ideator-description">
+      O estudo foi proposto pela Dra. Rosirene Gessinger, formada em Medicina
+      pela Universidade Federal do Rio Grande do Sul (1988), possui residência
+      Médica em Otorrinolaringologia (1993) e concluiu a Pós Graduação em
+      Medicina Aeroespacial na Universidade Estácio de Sá (2018)
+    </p>
+  </section>
+
+  <section>
+    <h2 class="objective-title">Objetivo</h2>
+    <p class="objective-description">
+      Este site foi desenvolvido a fim de coletar informações sobre a
+      intensidade de motion-sickness em pessoas que foram expostas à simulação
+      da gravidade da Lua e de Marte para facilitar a análise desses dados.
+    </p>
+  </section>
+
+  <section class="team-section">
+    <div class="team-container">
+      <h2 class="team-title">Desenvolvido por:</h2>
+      <div class="team-members">
+        <!-- Primeira linha de membros -->
+        <div class="member-row">
+          <div class="member-col">
+            <div class="member-avatar" aria-hidden="true"></div>
+            <p class="member-name">Gabriel Bisso</p>
+          </div>
+          <div class="member-col">
+            <div class="member-avatar" aria-hidden="true"></div>
+            <p class="member-name">Lorenzo Mayer</p>
+          </div>
+        </div>
+        <!-- Segunda linha de membros -->
+        <div class="member-row">
+          <div class="member-col">
+            <div class="member-avatar" aria-hidden="true"></div>
+            <p class="member-name">Maria Eduarda Gonzalez</p>
+          </div>
+          <div class="member-col">
+            <div class="member-avatar" aria-hidden="true"></div>
+            <p class="member-name">Mariana Koerber</p>
+          </div>
+        </div>
+        <!-- Terceira linha de membros -->
+        <div class="member-row">
+          <div class="member-col">
+            <div class="member-avatar" aria-hidden="true"></div>
+            <p class="member-name">Maria Virginia Souza</p>
+          </div>
+          <div class="member-col">
+            <div class="member-avatar" aria-hidden="true"></div>
+            <p class="member-name">Nicole Redmann</p>
+          </div>
+        </div>
+        <!-- Orientador e logo da universidade -->
+        <div class="member-row">
+          <div class="member-col">
+            <div class="member-avatar" aria-hidden="true"></div>
+            <p class="member-name">
+              <em>Profª orientadora:</em> Juliana Herbert
+            </p>
+          </div>
+          <div class="member-col">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/09c8308803c1ea59475bda3ffef3912c28483b7bdff9d5d36db060b45199dcbc?placeholderIfAbsent=true&apiKey=ca76908c09d645f09c52cbff3ba78418 [cdn.builder.io]"
+              alt="University Logo"
+              class="logo"
+            />
+          </div>
+        </div>
+      </div>
+      <p class="project-description">
+        Projeto da disciplina de Engenharia de Software II do curso de
+        Informática Biomédica da UFCSPA.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer"></footer>
+</main>
