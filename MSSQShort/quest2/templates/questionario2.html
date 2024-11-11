@@ -1,3 +1,9 @@
+{% load static %}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     
@@ -5,36 +11,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coleta de Dados Durante a Simulação</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel='stylesheet' href="{% static 'quest2/css/questionario2.css' %}">
+    <script src="{% static 'quest2/js/questionario2.js' %}"></script>
 </head>
 
 <body>
-    <h1>Medições Físicas e Sinais Vitais para Avaliação de Saúde</h1>
+
+    <header class="header"></header>
+
+    <h1 class="titulo">Medições Físicas e Sinais Vitais <br>para Avaliação de Saúde</h1>
 
     <form action="#" method="POST">
 
-        <p>Por favor, indique a altura(m) </p>
-        Altura:<input type="text" name="idade"><br>
+        <p class="pergunta">Por favor, indique a altura (m) </p>
+       <label class="resposta"> 
+        Altura:</p><input type="text" name="idade"><br> 
+    </label>
+    <hr>
 
-        <p> Por favor, indique a cintura abdominal (cm) </p>
-        Cintura abdominal:<input type="text" name="cintura"><br>
+        <p class="pergunta"> Por favor, indique a cintura abdominal (cm) </p>
+        <label class="resposta"> 
+        Cintura abdominal:</p><input type="text" name="cintura"><br>
+        </label>
+        <hr>~
 
-        <p> Por favor, indique o peso (kg) </p>
-        Peso:<input type="text" name="peso"><br>
-       
-        <p> Por favor, indique o IMC (kg/m2) </p>
-        IMC:<input type="text" name="idade"><br>
-        
-        <p> Por favor, indique a pressão arterial (mmHg) </p>
-        Pressão arterial:<input type="text" name="pressao"><br>
+        <p class="pergunta"> Por favor, indique o peso (kg) </p>
+        <label class="resposta"> 
+        Peso:</p><input type="text" name="peso"><br>
+        </label>
+        <hr>
 
-        <p> Por favor, indique a oximetria (%) </p>
-        Oximetria:<input type="text" name="oximetria"><br>
+        <p class="pergunta"> Por favor, indique o IMC (kg/m2) </p>
+        <label class="resposta"> 
+        IMC:</p><input type="text" name="idade"><br>
+        </label>
+        <hr>
 
-        <p> Por favor, indique a frequência cardíaca (bpm) </p>
-        Frequência cardíaca:<input type="text" name="bpm"><br><br>
+        <p class="pergunta"> Por favor, indique a pressão arterial (mmHg) </p>
+        <label class="resposta"> 
+        Pressão arterial:</p><input type="text" name="pressao"><br>
+        </label>
+        <hr>
 
-        <button type="submit">Enviar Respostas</button>
+        <p class="pergunta"> Por favor, indique a oximetria (%) </p>
+        <label class="resposta"> 
+        Oximetria:</p><input type="text" name="oximetria"><br>
+        </label>
+        <hr>
 
+        <p class="pergunta"> Por favor, indique a frequência cardíaca (bpm) </p>
+        <label class="resposta"> 
+        Frequência cardíaca:</p><input type="text" name="bpm"><br><br>
+        </label>
+        <hr>
+
+        <div class="divbot">
+            <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
+    </div></p>
     </form>
 
+    <footer class="footer"></footer>
 </body>
