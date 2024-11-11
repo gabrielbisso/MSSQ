@@ -54,6 +54,8 @@ def login_User(request):
 def quest1(request):
     return render(request, 'questionario1.html')
 
-
 def quest2(request):
     return render(request, 'questionario2.html')
+
+def quest3(request):
+    return render(request, 'questionario3.html')
