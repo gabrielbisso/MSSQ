@@ -2,6 +2,12 @@ body{
     background-color: #AAC1F2;
 }
 
+.formulario{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
 .primeiroh1 {
     font-family: 'Antonio', sans-serif;
     color: #04153B;
