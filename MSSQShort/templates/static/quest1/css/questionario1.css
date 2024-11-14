@@ -94,7 +94,6 @@ body{
 
 
 .header {
-    background-color: #04153b;
     align-self: stretch;
     display: flex;
     width: 100%;
@@ -106,5 +105,3 @@ body{
     padding: 15px 80px;
     font: 400 35px Inter, sans-serif;
   }
-
-
