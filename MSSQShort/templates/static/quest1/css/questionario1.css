@@ -23,7 +23,7 @@ body{
 
 .explicacaop {
     font-family: 'Inter', sans-serif;
-    color: #04153B;
+    color: #AAC1F2;
     font-size: 25px;  
     text-align: justify;
     margin-right: 25px;
@@ -46,7 +46,7 @@ body{
 
 .sexo{
     font-family: 'Antonio', sans-serif;
-    color: #04153B;
+    color: #AAC1F2;
     font-size: 25px; 
     margin-left: 25px;
 
@@ -54,28 +54,28 @@ body{
 
 .sexol{
     font-family: 'Inter', sans-serif;
-    color: #04153B;
+    color: #AAC1F2;
     font-size: 20px; 
     margin-left: 50px;
 }
 
 .pergunta{
     font-family: 'Antonio', sans-serif;
-    color: #04153B;
+    color: #AAC1F2;
     font-size: 26px; 
     margin-left: 25px;
 }
 
 .opcao{
     font-family: 'Inter', sans-serif;
-    color: #04153B;
+    color: #AAC1F2;
     font-size: 25px; 
     margin-left: 50px;
 }
 
 .explicacao10{
     font-family: 'Inter', sans-serif;
-    color: #04153B;
+    color: #AAC1F2;
     font-size: 25px; 
     margin-right: 25px;
     margin-left: 25px; 
