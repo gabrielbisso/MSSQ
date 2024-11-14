@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('', include('inicio.urls')),  # Sets 'inicio' as the homepage
     path('admin/', admin.site.urls),
     path('inicio/', include('inicio.urls')),
     path('login/', include('login.urls')),
