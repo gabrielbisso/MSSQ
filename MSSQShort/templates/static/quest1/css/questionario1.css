@@ -1,112 +1,60 @@
-body{
+body {
     background-color: #AAC1F2;
     font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    background-color: #04153B;
+    text-align: center;
+    padding: 20px 0;
+    font: 400 35px 'Inter', sans-serif;
+    color: #AAC1F2;
 }
 
 .box {
-    width: 330px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    margin-top: 20px; /* Espaço entre o header e o box */
+    background-color: #04153B;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #AAC1F2;
 }
 
-.formulario{
-    width: 80%;
-	top: 60px;
-    position: absolute;
-	right: -5px;
-	padding: 15px 15px 15px 30px;
-    z-index: 1;
+.formulario {
+    width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #AAC1F2;
     border-radius: 5px;
-    background-color: #04153B;
 }
 
-.primeiroh1 {
-    color: #04153B;
-    font-weight: bold;
-    font-size: 35px; 
+.primeiroh1, .explicacaop, .idadep, .idadel, .sexo, .sexol, .pergunta, .opcao, .explicacao10 {
+    color: #AAC1F2;
     text-align: center;
-    margin-top: 25px;
-  }
-
-.explicacaop {
-    color: #AAC1F2;
-    font-size: 25px;  
-    text-align: justify;
-    margin-right: 25px;
-    margin-left: 25px;
 }
 
-.idadep{
-    color: #AAC1F2;
-    font-size: 25px; 
-    margin-left: 25px;
-}
-
-.idadel{
-    color: #AAC1F2;
-    font-size: 20px; 
-    margin-left: 70px;
-}
-
-.sexo{
-    color: #AAC1F2;
-    font-size: 25px; 
-    margin-left: 25px;
-
-}
-
-.sexol{
-    color: #AAC1F2;
-    font-size: 20px; 
-    margin-left: 50px;
-}
-
-.pergunta{
-    color: #AAC1F2;
-    font-size: 26px; 
-    margin-left: 25px;
-}
-
-.opcao{
-    color: #AAC1F2;
-    font-size: 25px; 
-    margin-left: 50px;
-}
-
-.explicacao10{
-    font-family: 'Inter', sans-serif;
-    color: #AAC1F2;
-    font-size: 25px; 
-    margin-right: 25px;
-    margin-left: 25px; 
-}
-
-.divbot{
-    text-align: right;
+.divbot {
+    text-align: center;
     margin-top: 30px;
 }
 
-#botao{
-    background-color: #04153b; 
+#botao {
+    background-color: #AAC1F2;
     color: white;
-    margin-right: 50px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-color: #AAC1F2;
+    cursor: pointer;
 }
-
-
-.header {
-    background-color: #04153B;
-    align-self: stretch;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: center;
-    justify-content: center;
-    padding: 15px 80px;
-    font: 400 35px Inter, sans-serif;
-  }
