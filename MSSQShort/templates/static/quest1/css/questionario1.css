@@ -1,7 +1,7 @@
 body{
     background-color: #AAC1F2;
     height: 100%;
-  font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .formulario{
@@ -15,7 +15,6 @@ body{
 }
 
 .primeiroh1 {
-    font-family: 'Antonio', sans-serif;
     color: #AAC1F2;
     font-weight: bold;
     font-size: 35px; 
@@ -24,7 +23,6 @@ body{
   }
 
 .explicacaop {
-    font-family: 'Inter', sans-serif;
     color: #AAC1F2;
     font-size: 25px;  
     text-align: justify;
@@ -40,14 +38,12 @@ body{
 }
 
 .idadel{
-    font-family: 'Inter', sans-serif;
-    color: #04153B;
+    color: #AAC1F2;
     font-size: 20px; 
     margin-left: 70px;
 }
 
 .sexo{
-    font-family: 'Antonio', sans-serif;
     color: #AAC1F2;
     font-size: 25px; 
     margin-left: 25px;
@@ -55,21 +51,18 @@ body{
 }
 
 .sexol{
-    font-family: 'Inter', sans-serif;
     color: #AAC1F2;
     font-size: 20px; 
     margin-left: 50px;
 }
 
 .pergunta{
-    font-family: 'Antonio', sans-serif;
     color: #AAC1F2;
     font-size: 26px; 
     margin-left: 25px;
 }
 
 .opcao{
-    font-family: 'Inter', sans-serif;
     color: #AAC1F2;
     font-size: 25px; 
     margin-left: 50px;
