@@ -1,8 +1,8 @@
 {% load static %}
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,7 +32,7 @@
                 <li>Questionário - Parte 2</li>
             </ul>
             <form class= "form" action="#" method="POST" id="formulario">
-                <fieldset class="section is-active">
+                <div class="section">
                     <h2>Informações Pessoais</h2>
                     <p class="idadep">Por favor, indique a sua idade</p>
                     <label class="idadel">
@@ -48,9 +48,10 @@
                         <input type="radio" name="sexo" value="2" id="checksexo">
                         Feminino
                     </label><br>
-                    <div class="button">Próximo</div>
-                </fieldset>
-                <fieldset class="section">
+                    <button type="button" class="button">Próximo</button>
+                </div>
+
+                <div class="section">
                     <h2>Questionário - Parte 1</h2>
                     <p class="explicacaop">
                         Este questionário foi concebido para avaliar o seu grau de suscetibilidade ao enjoo de
@@ -286,9 +287,9 @@
                             Frequentemente sentiu enjoos
                         </label><br>
                     </div><br>
-                    <div class="button">Próximo</div>
-                </fieldset>
-                <fieldset class="section">
+                    <button type="button" class="button">Próximo</button>
+                </div>
+                <div class="section">
                     <h2>Questionário - Parte 2</h2>
                     <p class="explicacao10"> Este questionário foi concebido para avaliar o seu grau de suscetibilidade
                         ao enjoo de
@@ -525,15 +526,12 @@
                             Frequentemente sentiu enjoos
                         </label><br>
                     </div><br>
-
-                    <div class="button">
-                        <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
-                    </div>
-                </fieldset>
-                <fieldset class="section">
+                        <button type="submit" name="button" class="btn login_btn" id="botao" disabled> Enviar Respostas</button>
+                </div>
+                <div class="section">
                     <h2>Questionário finalizado!</h2>
                     <p>Agradecemos a sua participação!</p>
-                </fieldset>
+                </div>
             </form>
         </div>
     </div>

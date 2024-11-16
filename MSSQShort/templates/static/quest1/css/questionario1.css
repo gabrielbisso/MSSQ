@@ -16,6 +16,14 @@ body {
     color: #AAC1F2;
 }
 
+.section {
+    display: none; /* Oculta todas as seções inicialmente */
+  }
+  
+  .section.is-active {
+    display: block; /* Exibe a seção ativa */
+  }
+
 .box {
     width: 80%;
     max-width: 700px;
