@@ -6,589 +6,561 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário Infância</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel='stylesheet' href="{% static 'quest1/css/questionario1.css' %}">
     <script src="{% static 'quest1/js/questionario1.js' %}"></script>
 </head>
 
 <body>
-    <header class="header"> <h1 class="primeiroh1">Teste em relação à INFÂNCIA</h1> </header>
+    <header class="header">
+        <h1 class="primeiroh1">Teste em relação à INFÂNCIA</h1>
+    </header>
     <div class="box">
-    <div class="formulario">
+        <div class="formulario">
             <ul class="steps">
-              <li class="is-active">Informações Pessoais</li>
-              <li>Questionário - Parte 1</li>
-              <li>Questionário - Parte 2</li>
+                <li class="is-active">Informações Pessoais</li>
+                <li>Questionário - Parte 1</li>
+                <li>Questionário - Parte 2</li>
             </ul>
-        <form action="#" method="POST" id="formulario">
-            <fieldset class="section is-active"></fieldset>
+            <form action="#" method="POST" id="formulario">
+                <fieldset class="section is-active">
+                <h2>Informações Pessoais</h2>
+                <p class="idadep">Por favor, indique a sua idade</p>
+                <label class="idadel">
+                    Idade:</p><input type="text" name="idade"><br>
+                </label>
 
-        <p class="idadep">Por favor, indique a sua idade</p>
+                <p class="sexo"> Por favor, indique seu sexo </p>
+                <label class="sexol">
+                    <input type="radio" name="sexo" value="1" id="checksexo">
+                    Masculino
+                </label><br>
+                <label class="sexol">
+                    <input type="radio" name="sexo" value="2" id="checksexo">
+                    Feminino
+                </label><br>
+                <div class="button">Próximo</div>
+                </fieldset>
+                <fieldset class="section">
+                    <h2>Questionário - Parte 1</h2>
+                    <p class="explicacaop">
+                        Este questionário foi concebido para avaliar o seu grau de suscetibilidade ao enjoo de movimento, e quais os tipos de movimento mais suscetíveis de causar esse enjoo. Enjoo, neste contexto, significa sentir-se enjoado ou nauseado ou realmente vomitar.<br>
+                        <b>Apenas a sua experiência de INFÂNCIA (antes dos 12 anos de idade)</b>, para cada um dos
+                        seguintes tipos de transporte ou entretenimento, indique: <b>Quando CRIANÇA (antes dos 12 anos)</b>, com que
+                        frequência se sentiu enjoado ou nauseado em relação a:
+                    </p>
 
-        <label class="idadel">
-            Idade:</p><input type="text" name="idade"><br>
-        </label>
+                    <!-- Pergunta 1 -->
+                    <div class="pergunta">
+                        <p>1. Carros </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1" value="1" id="check1">
+                            Não aplicável
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1" value="2" id="check1">
+                            Nunca sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1" value="3" id="check1">
+                            Raramente sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1" value="4" id="check1">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1" value="5" id="check1">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
+                    <!-- Pergunta 2 -->
+                    <div class="pergunta">
+                        <p>2. Autocarros </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2" value="1" id="check2">
+                            Não aplicável
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2" value="2" id="check2">
+                            Nunca sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2" value="3" id="check2">
+                            Raramente sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2" value="4" id="check2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2" value="5" id="check2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
 
-        <p class="sexo"> Por favor, indique seu sexo </p>
+                    <!-- Pergunta 3 -->
+                    <div class="pergunta">
+                        <p>3. Comboios </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3" value="1" id="check3">
+                            Não aplicável
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3" value="2" id="check3">
+                            Nunca sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3" value="3" id="check3">
+                            Raramente sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3" value="4" id="check3">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3" value="5" id="check3">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
 
-        <label class="sexol">
-            <input type="radio" name="sexo" value="1" id="checksexo">
-            Masculino
-        </label><br>
+                    <!-- Pergunta 4 -->
+                    <div class="pergunta">
+                        <p>4. Aviões </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4" value="1" id="check4">
+                            Não aplicável
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4" value="2" id="check4">
+                            Nunca sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4" value="3" id="check4">
+                            Raramente sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4" value="4" id="check4">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4" value="5" id="check4">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
 
-        <label class="sexol">
-            <input type="radio" name="sexo" value="2" id="checksexo">
-            Feminino
-        </label><br>
+                    <!-- Pergunta 5 -->
+                    <div class="pergunta">
+                        <p>5. Embarcações pequenas </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5" value="1" id="check5">
+                            Não aplicável
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5" value="2" id="check5">
+                            Nunca sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5" value="3" id="check5">
+                            Raramente sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5" value="4" id="check5">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5" value="5" id="check5">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
 
-        <p class="explicacaop">
-            Este questionário foi concebido para avaliar o seu grau de suscetibilidade ao enjoo de movimento, e quais os
-            tipos de movimento mais suscetíveis de causar esse enjoo. Enjoo, neste contexto, significa sentir-se enjoado
-            ou nauseado ou realmente vomitar.<br>
-            <b>Apenas a sua experiência de INFÂNCIA (antes dos 12 anos de idade)</b>, para cada um dos seguintes tipos
-            de transporte ou entretenimento, indique: <b>Quando CRIANÇA (antes dos 12 anos)</b>, com que frequência se
-            sentiu enjoado ou nauseado em relação a:
-        </p>
+                    <!-- Pergunta 6 -->
+                    <div class="pergunta">
+                        <p>6. Navios, por exemplo, Ferries </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6" value="1" id="check6">
+                            Não aplicável
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6" value="2" id="check6">
+                            Nunca sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6" value="3" id="check6">
+                            Raramente sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6" value="4" id="check6">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6" value="5" id="check6">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
 
-        <!-- Pergunta 1 -->
-        <div class="pergunta">
-            <p>1. Carros </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta1" value="1" id="check1">
-                Não aplicável
-            </label><br>
+                    <!-- Pergunta 7 -->
+                    <div class="pergunta">
+                        <p>7. Baloiços em parques infantis </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7" value="1" id="check7">
+                            Não aplicável
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7" value="2" id="check7">
+                            Nunca sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7" value="3" id="check7">
+                            Raramente sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7" value="4" id="check7">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7" value="5" id="check7">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
 
-            <label class="opcao">
-                <input type="radio" name="pergunta1" value="2" id="check1">
-                Nunca sentiu enjoos
-            </label><br>
+                    <!-- Pergunta 8 -->
+                    <div class="pergunta">
+                        <p>8. Carroséis em parques infantis </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8" value="1" id="check8">
+                            Não aplicável
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8" value="2" id="check8">
+                            Nunca sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8" value="3" id="check8">
+                            Raramente sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8" value="4" id="check8">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8" value="5" id="check8">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
 
-            <label class="opcao">
-                <input type="radio" name="pergunta1" value="3" id="check1">
-                Raramente sentiu enjoos
-            </label><br>
+                    <!-- Pergunta 9 -->
+                    <div class="pergunta">
+                        <p>9. Montanhas Russas, Diversões </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9" value="1" id="check9">
+                            Não aplicável
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9" value="2" id="check9">
+                            Nunca sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9" value="3" id="check9">
+                            Raramente sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9" value="4" id="check9">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9" value="5" id="check9">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div><br>
 
-            <label class="opcao">
-                <input type="radio" name="pergunta1" value="4" id="check1">
-                Algumas vezes sentiu enjoos
-            </label><br>
+                    <p class="explicacao10"><b>A sua experiência NOS ÚLTIMOS 10 ANOS (aproximadamente)</b>, para cada um
+                        dos
+                        seguintes tipos de
+                        transporte ou entretenimento, indique:</p><br>
+                    <p class="explicacao10"><b>Nos ÚLTIMOS 10 ANOS</b>, com que frequência se sentiu enjoado ou
+                        nauseado:
+                    </p>
 
-            <label class="opcao">
-            <input type="radio" name="pergunta1" value="5" id="check1">
-            Frequentemente sentiu enjoos
-            </label><br>
+                    <!-- Pergunta 1 -->
+                    <div class="pergunta">
+                        <p>1. Carros </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1.2" value="1" id="check1.2">
+                            Não aplicável
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1.2" value="2" id="check1.2">
+                            Nunca sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1.2" value="3" id="check1.2">
+                            Raramente sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1.2" value="4" id="check1.2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta1.2" value="5" id="check1.2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
+
+                    <!-- Pergunta 2 -->
+                    <div class="pergunta">
+                        <p>2. Autocarros </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2.2" value="1" id="check2.2">
+                            Não aplicável
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2.2" value="2" id="check2.2">
+                            Nunca sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2.2" value="3" id="check2.2">
+                            Raramente sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2.2" value="4" id="check2.2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta2.2" value="5" id="check2.2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
+
+                    <!-- Pergunta 3 -->
+                    <div class="pergunta">
+                        <p>3. Comboios </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3.2" value="1" id="check3.2">
+                            Não aplicável
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3.2" value="2" id="check3.2">
+                            Nunca sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3.2" value="3" id="check3.2">
+                            Raramente sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3.2" value="4" id="check3.2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta3.2" value="5" id="check3.2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
+
+                    <!-- Pergunta 4 -->
+                    <div class="pergunta">
+                        <p>4. Aviões </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4.2" value="1" id="check4.2">
+                            Não aplicável
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4.2" value="2" id="check4.2">
+                            Nunca sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4.2" value="3" id="check4.2">
+                            Raramente sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4.2" value="4" id="check4.2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta4.2" value="5" id="check4.2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
+
+                    <!-- Pergunta 5 -->
+                    <div class="pergunta">
+                        <p>5. Embarcações pequenas </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5.2" value="1" id="check5.2">
+                            Não aplicável
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5.2" value="2" id="check5.2">
+                            Nunca sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5.2" value="3" id="check5.2">
+                            Raramente sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5.2" value="4" id="check5.2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta5.2" value="5" id="check5.2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
+
+                    <!-- Pergunta 6 -->
+                    <div class="pergunta">
+                        <p>6. Navios, por exemplo, Ferries </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6.2" value="1" id="check6.2">
+                            Não aplicável
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6.2" value="2" id="check6.2">
+                            Nunca sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6.2" value="3" id="check6.2">
+                            Raramente sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6.2" value="4" id="check6.2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta6.2" value="5" id="check6.2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
+
+                    <!-- Pergunta 7 -->
+                    <div class="pergunta">
+                        <p>7. Baloiços em parques infantis </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7.2" value="1" id="check7.2">
+                            Não aplicável
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7.2" value="2" id="check7.2">
+                            Nunca sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7.2" value="3" id="check7.2">
+                            Raramente sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7.2" value="4" id="check7.2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta7.2" value="5" id="check7.2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
+
+                    <!-- Pergunta 8 -->
+                    <div class="pergunta">
+                        <p>8. Carroséis em parques infantis </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8.2" value="1" id="check8.2">
+                            Não aplicável
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8.2" value="2" id="check8.2">
+                            Nunca sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8.2" value="3" id="check8.2">
+                            Raramente sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8.2" value="4" id="check8.2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta8.2" value="5" id="check8.2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div>
+
+                    <!-- Pergunta 9 -->
+                    <div class="pergunta">
+                        <p>9. Montanhas Russas, Diversões </p>
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9.2" value="1" id="check9.2">
+                            Não aplicável
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9.2" value="2" id="check9.2">
+                            Nunca sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9.2" value="3" id="check9.2">
+                            Raramente sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9.2" value="4" id="check9.2">
+                            Algumas vezes sentiu enjoos
+                        </label><br>
+
+                        <label class="opcao">
+                            <input type="radio" name="pergunta9.2" value="5" id="check9.2">
+                            Frequentemente sentiu enjoos
+                        </label><br>
+                    </div><br>
+
+                    <div class="divbot">
+                        <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
+                    </div>
+                    </p>
+
+            </form>
         </div>
-<hr>
-        <!-- Pergunta 2 -->
-        <div class="pergunta">
-            <p>2. Autocarros </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta2" value="1" id="check2">
-                Não aplicável
-            </label><br>
+    </div>
 
-            <label class="opcao">
-                <input type="radio" name="pergunta2" value="2" id="check2">
-                Nunca sentiu enjoos
-            </label><br>
 
-            <label class="opcao">
-                <input type="radio" name="pergunta2" value="3" id="check2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta2" value="4" id="check2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta2" value="5" id="check2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 3 -->
-        <div class="pergunta">
-            <p>3. Comboios </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta3" value="1" id="check3">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta3" value="2" id="check3">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta3" value="3" id="check3">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta3" value="4" id="check3">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta3" value="5" id="check3">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 4 -->
-        <div class="pergunta">
-            <p>4. Aviões </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta4" value="1" id="check4">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta4" value="2" id="check4">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta4" value="3" id="check4">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta4" value="4" id="check4">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta4" value="5" id="check4">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 5 -->
-        <div class="pergunta">
-            <p>5. Embarcações pequenas </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta5" value="1" id="check5">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta5" value="2" id="check5">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta5" value="3" id="check5">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta5" value="4" id="check5">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta5" value="5" id="check5">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 6 -->
-        <div class="pergunta">
-            <p>6. Navios, por exemplo, Ferries </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta6" value="1" id="check6">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta6" value="2" id="check6">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta6" value="3" id="check6">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta6" value="4" id="check6">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta6" value="5" id="check6">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 7 -->
-        <div class="pergunta">
-            <p>7. Baloiços em parques infantis </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta7" value="1" id="check7">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta7" value="2" id="check7">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta7" value="3" id="check7">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta7" value="4" id="check7">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta7" value="5" id="check7">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 8 -->
-        <div class="pergunta">
-            <p>8. Carroséis em parques infantis </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta8" value="1" id="check8">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta8" value="2" id="check8">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta8" value="3" id="check8">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta8" value="4" id="check8">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta8" value="5" id="check8">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 9 -->
-        <div class="pergunta">
-            <p>9. Montanhas Russas, Diversões </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta9" value="1" id="check9">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta9" value="2" id="check9">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta9" value="3" id="check9">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta9" value="4" id="check9">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta9" value="5" id="check9">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div><br>
-
-        <p class="explicacao10"><b>A sua experiência NOS ÚLTIMOS 10 ANOS (aproximadamente)</b>, para cada um dos seguintes tipos de
-            transporte ou entretenimento, indique:</p><br>
-        <p class="explicacao10"><b>Nos ÚLTIMOS 10 ANOS</b>, com que frequência se sentiu enjoado ou nauseado:</p>
-
-        <!-- Pergunta 1 -->
-        <div class="pergunta">
-            <p>1. Carros </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta1.2" value="1" id="check1.2">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta1.2" value="2" id="check1.2">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta1.2" value="3" id="check1.2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta1.2" value="4" id="check1.2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta1.2" value="5" id="check1.2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 2 -->
-        <div class="pergunta">
-            <p>2. Autocarros </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta2.2" value="1" id="check2.2">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta2.2" value="2" id="check2.2">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta2.2" value="3" id="check2.2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta2.2" value="4" id="check2.2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta2.2" value="5" id="check2.2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 3 -->
-        <div class="pergunta">
-            <p>3. Comboios </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta3.2" value="1" id="check3.2">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta3.2" value="2" id="check3.2">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta3.2" value="3" id="check3.2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta3.2" value="4" id="check3.2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta3.2" value="5" id="check3.2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 4 -->
-        <div class="pergunta">
-            <p>4. Aviões </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta4.2" value="1" id="check4.2">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta4.2" value="2" id="check4.2">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta4.2" value="3" id="check4.2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta4.2" value="4" id="check4.2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta4.2" value="5" id="check4.2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 5 -->
-        <div class="pergunta">
-            <p>5. Embarcações pequenas </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta5.2" value="1" id="check5.2">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta5.2" value="2" id="check5.2">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta5.2" value="3" id="check5.2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta5.2" value="4" id="check5.2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta5.2" value="5" id="check5.2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 6 -->
-        <div class="pergunta">
-            <p>6. Navios, por exemplo, Ferries </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta6.2" value="1" id="check6.2">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta6.2" value="2" id="check6.2">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta6.2" value="3" id="check6.2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta6.2" value="4" id="check6.2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta6.2" value="5" id="check6.2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 7 -->
-        <div class="pergunta">
-            <p>7. Baloiços em parques infantis </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta7.2" value="1" id="check7.2">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta7.2" value="2" id="check7.2">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta7.2" value="3" id="check7.2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta7.2" value="4" id="check7.2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta7.2" value="5" id="check7.2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 8 -->
-        <div class="pergunta">
-            <p>8. Carroséis em parques infantis </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta8.2" value="1" id="check8.2">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta8.2" value="2" id="check8.2">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta8.2" value="3" id="check8.2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta8.2" value="4" id="check8.2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta8.2" value="5" id="check8.2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div>
-
-        <!-- Pergunta 9 -->
-        <div class="pergunta">
-            <p>9. Montanhas Russas, Diversões </p>
-            <label class="opcao">
-                <input type="radio" name="pergunta9.2" value="1" id="check9.2">
-                Não aplicável
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta9.2" value="2" id="check9.2">
-                Nunca sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-                <input type="radio" name="pergunta9.2" value="3" id="check9.2">
-                Raramente sentiu enjoos
-            </label><br>
-
-            <label class="opcao"> 
-                <input type="radio" name="pergunta9.2" value="4" id="check9.2">
-                Algumas vezes sentiu enjoos
-            </label><br>
-
-            <label class="opcao">
-            <input type="radio" name="pergunta9.2" value="5" id="check9.2">
-            Frequentemente sentiu enjoos
-            </label><br>
-        </div><br>
-
-        <div class="divbot">
-            <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
-    </div></p>
-        
-    </form></div></div>
-
-    
 
 </body>
