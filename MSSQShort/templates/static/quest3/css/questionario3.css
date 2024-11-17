@@ -2,6 +2,7 @@
 
 body{
     background-color: #AAC1F2;
+    font-family: 'Nunito', sans-serif;
 }
 
 .titulo{
@@ -23,8 +24,8 @@ body{
 .sintoma{
     font-family: 'Nunito', sans-serif;
     color: #04153B;
-    font-size: 17px; 
-    margin-left: 50px;
+    font-size: 20px; 
+    margin-left: 25px;
 }
 
 .divbot{

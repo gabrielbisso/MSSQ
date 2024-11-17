@@ -25,13 +25,13 @@
 
     <form action="#" method="POST">
 
-        <p class="pergunta">
+        <p class="sintoma">
            Após o experimento, indique se você apresentou algum sinal ou sintoma abaixo:<br>
         </p>
 
         <!--Sintoma 1 -->
         <div class="sintoma">
-            <label>
+            <label class="sintoma">
                 <input type="checkbox" name="sintomaEnjoo" value="1">
                 Náusea/ sensação de enjoo ou vontade de vomitar
             </label><br>
@@ -39,7 +39,7 @@
 
         <!--Sintoma 2 -->
         <div class="sintoma">
-            <label>
+            <label class="sintoma">
                 <input type="checkbox" name="sintomaEnjoo" value="2">
                 Vômito
             </label><br>
@@ -47,7 +47,7 @@
 
         <!--Sintoma 3 -->
         <div class="sintoma">
-            <label>
+            <label class="sintoma">
                 <input type="checkbox" name="sintomaEnjoo" value="3">
                 Tontura/sensação de desequilíbrio
             </label><br>
@@ -55,7 +55,7 @@
 
         <!--Sintoma 4 -->
         <div class="sintoma">
-            <label>
+            <label class="sintoma">
                 <input type="checkbox" name="sintomaEnjoo" value="4">
                 Suor excessivo e frio
             </label><br>
@@ -63,7 +63,7 @@
 
         <!--Sintoma 5 -->
         <div class="sintoma">
-            <label>
+            <label class="sintoma">
                 <input type="checkbox" name="sintomaEnjoo" value="5">
                 Palidez
             </label><br>
@@ -71,7 +71,7 @@
 
         <!--Sintoma 6 -->
         <div class="sintoma">
-            <label>
+            <label class="sintoma">
                 <input type="checkbox" name="sintomaEnjoo" value="6">
                 Dor de cabeça
             </label><br>
@@ -79,7 +79,7 @@
 
         <!--Sintoma 7 -->
         <div class="sintoma">
-            <label>
+            <label class="sintoma">
                 <input type="checkbox" name="sintomaEnjoo" value="7">
                 Sensação de cansaço ou necessidade de dormir
             </label><br>
@@ -87,7 +87,7 @@
 
         <!--Sintoma 8 -->
         <div class="sintoma">
-            <label>
+            <label class="sintoma">
                 <input type="checkbox" name="sintomaEnjoo" value="8">
                 Bocejos frequentes
             </label><br>
@@ -95,7 +95,7 @@
 
         <!--Sintoma 9 -->
         <div class="sintoma">
-            <label>
+            <label class="sintoma">
                 <input type="checkbox" name="sintomaEnjoo" value="9">
                 Hiperventilação/respiração rápida e profunda 
             </label><br>
@@ -103,10 +103,10 @@
 
         <!--Sintoma 10 -->
         <div class="sintoma">
-            <p>Outros
             <label for="outros">
-            <textarea id="outros" name="outros" rows="4" cols="50" placeholder="Digite seu comentário aqui..."></textarea>
-        </label>
+                <p class="sintoma">Outros:</p>
+                <textarea class="sintoma" id="outros" name="outros" rows="4" cols="50" placeholder="Digite seu comentário aqui..."></textarea>
+            </label>
             <br>
             </p>
         </div> 
