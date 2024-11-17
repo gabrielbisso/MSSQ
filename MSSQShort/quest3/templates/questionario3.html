@@ -20,103 +20,97 @@
 
 <body>
     <header class="header"></header>
-
     <h1 class="titulo">Teste Pós Experimento</h1><br>
-
-    <form action="#" method="POST">
-
-        <p class="pergunta">
+    <form action="{% url 'questionario3' %}" method="POST">{% csrf_token %}
+        <p class="sintoma">
            Após o experimento, indique se você apresentou algum sinal ou sintoma abaixo:<br>
         </p>
 
         <!--Sintoma 1 -->
         <div class="sintoma">
-            <label>
-                <input type="checkbox" name="sintomaEnjoo" value="1">
-                Náusea/ sensação de enjoo ou vontade de vomitar
+            <label class="sintoma">
+                <input type="checkbox" name="nausea" value="1">
+                Náusea/Sensação de enjoo
             </label><br>
         </div> 
 
         <!--Sintoma 2 -->
         <div class="sintoma">
-            <label>
-                <input type="checkbox" name="sintomaEnjoo" value="2">
+            <label class="sintoma">
+                <input type="checkbox" name="vomito" value="2">
                 Vômito
             </label><br>
         </div> 
 
         <!--Sintoma 3 -->
         <div class="sintoma">
-            <label>
-                <input type="checkbox" name="sintomaEnjoo" value="3">
-                Tontura/sensação de desequilíbrio
+            <label class="sintoma">
+                <input type="checkbox" name="tontura" value="3">
+                Tontura/Sensação de Desequilíbrio
             </label><br>
         </div> 
 
         <!--Sintoma 4 -->
         <div class="sintoma">
-            <label>
-                <input type="checkbox" name="sintomaEnjoo" value="4">
+            <label class="sintoma">
+                <input type="checkbox" name="suor" value="4">
                 Suor excessivo e frio
             </label><br>
         </div> 
 
         <!--Sintoma 5 -->
         <div class="sintoma">
-            <label>
-                <input type="checkbox" name="sintomaEnjoo" value="5">
+            <label class="sintoma">
+                <input type="checkbox" name="palidez" value="5">
                 Palidez
             </label><br>
         </div> 
 
         <!--Sintoma 6 -->
         <div class="sintoma">
-            <label>
-                <input type="checkbox" name="sintomaEnjoo" value="6">
+            <label class="sintoma">
+                <input type="checkbox" name="dorcab" value="6">
                 Dor de cabeça
             </label><br>
         </div> 
 
         <!--Sintoma 7 -->
         <div class="sintoma">
-            <label>
-                <input type="checkbox" name="sintomaEnjoo" value="7">
+            <label class="sintoma">
+                <input type="checkbox" name="cansaco" value="7">
                 Sensação de cansaço ou necessidade de dormir
             </label><br>
         </div> 
 
         <!--Sintoma 8 -->
         <div class="sintoma">
-            <label>
-                <input type="checkbox" name="sintomaEnjoo" value="8">
+            <label class="sintoma">
+                <input type="checkbox" name="bocejo" value="8">
                 Bocejos frequentes
             </label><br>
         </div> 
 
         <!--Sintoma 9 -->
         <div class="sintoma">
-            <label>
-                <input type="checkbox" name="sintomaEnjoo" value="9">
-                Hiperventilação/respiração rápida e profunda 
+            <label class="sintoma">
+                <input type="checkbox" name="hiperv" value="9">
+                Hiperventilação/Respiração rápida e profunda 
             </label><br>
         </div> 
 
         <!--Sintoma 10 -->
         <div class="sintoma">
-            <p>Outros
             <label for="outros">
-            <textarea id="outros" name="outros" rows="4" cols="50" placeholder="Digite seu comentário aqui..."></textarea>
-        </label>
+                <p class="sintoma">Outros:</p>
+                <textarea class="sintoma" id="outros" name="outros" rows="4" cols="50" placeholder="Digite seu comentário aqui..."></textarea>
+            </label>
             <br>
             </p>
         </div> 
 
         <div class="divbot">
             <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
-    </div></p>
-
+        </div></p>
     </form>
-
     <footer class="footer"></footer>
-
 </body>

@@ -22,4 +22,4 @@ def questionario2(request):
 
         quest2_envio.save()
 
-        return HttpResponse("oIE moreh")
+        return render(request, 'questionario3.html')
