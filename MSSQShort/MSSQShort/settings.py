@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  # Usando MySQL
         'NAME': 'projeto_mssqshort',  # Substitua pelo nome do seu banco de dados
         'USER': 'root',  # Seu usuário MySQL
-        'PASSWORD': 'Mila2003@',  # A senha do usuário
+        'PASSWORD': '',  # A senha do usuário
         'HOST': 'localhost',  # Ou o endereço IP do servidor MySQL, se não for local
         'PORT': '3306',
     }
