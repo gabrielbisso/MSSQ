@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'MSSQShort.wsgi.application'
 
 DATABASES = {
     'default': {
-       'ENGINE': 'django.db.backends.mysql',  # Usando MySQL
+        'ENGINE': 'django.db.backends.mysql',  # Usando MySQL
         'NAME': 'projeto_mssqshort',  # Substitua pelo nome do seu banco de dados
         'USER': 'ProjetoMSSQ',  # Seu usuário MySQL
         'PASSWORD': 'Projetomssq@',  # A senha do usuário
