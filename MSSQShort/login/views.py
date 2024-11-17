@@ -31,9 +31,6 @@ def login_User(request):
     elif request.method == "POST":
         credencial = request.POST.get('credencial')
 
-        teste = quest2.objects.filter()
-        print(teste[1].cintura)
-
         if credencial == "":
             disable_button = True
             return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_button, 'disable_button3': disable_button, 'credencial': credencial})

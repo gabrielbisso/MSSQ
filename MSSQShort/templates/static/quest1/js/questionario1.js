@@ -44,29 +44,29 @@ e.preventDefault();
 });
 });
 
-// Valida campos da seção atual
-function validateCurrentSection(section) {
-const inputsInSection = section.find('input[type="text"]');
-const radiosInSection = section.find('input[type="radio"]');
+    // Valida campos da seção atual
+    function validateCurrentSection(section) {
+        const inputsInSection = section.find('input[type="text"]');
+        const radiosInSection = section.find('input[type="radio"]');
 
-const allInputsFilled = Array.from(inputsInSection).every(input => input.value.trim() !== '');
-const atLeastOneRadioSelected = Array.from(radiosInSection).some(radio => radio.checked);
+        const allInputsFilled = Array.from(inputsInSection).every(input => input.value.trim() !== '');
+        const atLeastOneRadioSelected = Array.from(radiosInSection).some(radio => radio.checked);
 
-return allInputsFilled && atLeastOneRadioSelected;
-}
+        return allInputsFilled && atLeastOneRadioSelected;
+    }
 
-// Valida todos os campos para habilitar/desabilitar o botão
-function checkForm() {
-const allInputsFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-const allRadiosSelected = Array.from(radios).some(radio => radio.checked);
+    // Valida todos os campos para habilitar/desabilitar o botão
+    function checkForm() {
+        const allInputsFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+        const allRadiosSelected = Array.from(radios).some(radio => radio.checked);
 
-submitButton.disabled = !(allInputsFilled && allRadiosSelected);
-}
+        submitButton.disabled = !(allInputsFilled && allRadiosSelected);
+    }
 
-// Adiciona eventos de input e change para validação em tempo real
-inputs.forEach(input => input.addEventListener('input', checkForm));
-radios.forEach(radio => radio.addEventListener('change', checkForm));
+    // Adiciona eventos de input e change para validação em tempo real
+    inputs.forEach(input => input.addEventListener('input', checkForm));
+    radios.forEach(radio => radio.addEventListener('change', checkForm));
 
-// Chama a função inicialmente para garantir que o botão esteja no estado correto
-checkForm();
+    // Chama a função inicialmente para garantir que o botão esteja no estado correto
+    checkForm();
 });
