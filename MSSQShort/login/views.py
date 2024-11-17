@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import messages
+from django.db import models
+from quest2.models import quest2
+from quest3.models import quest3
 
 
 def login_Adm(request):
@@ -27,6 +30,9 @@ def login_User(request):
 
     elif request.method == "POST":
         credencial = request.POST.get('credencial')
+
+        teste = quest2.objects.filter()
+        print(teste[1].cintura)
 
         if credencial == "":
             disable_button = True
