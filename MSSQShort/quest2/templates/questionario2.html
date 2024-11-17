@@ -19,13 +19,9 @@
 </head>
 
 <body>
-
     <header class="header"></header>
-
     <h1 class="titulo">Medições Físicas e Sinais Vitais <br>para Avaliação de Saúde</h1>
-
     <hr class="linha">
-
     <form action="{% url 'questionario2' %}" method="POST">{% csrf_token %}
         <p class="pergunta">1) Por favor, indique a altura (m) </p>
         <label class="resposta"> 
@@ -73,7 +69,5 @@
             <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
         </div></p>
     </form>
-
     <footer class="footer"></footer>
-    
 </body>
