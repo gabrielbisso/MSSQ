@@ -32,43 +32,61 @@ def login_User(request):
 
     elif request.method == "POST":
         credencial = request.POST.get('credencial')
-        q1_exist = banco_quest1.objects.get(id=credencial).exists()
-        q2_exist = banco_quest2.objects.get(id=credencial).exists()
-        q3_exist = banco_quest3.objects.get(id=credencial).exists()
+        # Verificando a existência dos registros nos três bancos de dados
+        q1 = banco_quest1.objects.filter(id=credencial).first()
+        q2 = banco_quest2.objects.filter(id=credencial).first()
+        q3 = banco_quest3.objects.filter(id=credencial).first()
 
-        try:
-            q1 = banco_quest1.objects.get(id=credencial)
-            q1_exist = True
-            q2 = banco_quest2.objects.get(id=credencial)
-            q2_exist = True
-            q3 = banco_quest3.objects.get(id=credencial)
-            q3_exist = True
-        except User.DoesNotExist:
-            q1_exist = False
-            q2_exist = False
-            q3_exist = False
+        # Definindo as variáveis de existência com base na consulta
+        q1_exist = q1 is not None
+        q2_exist = q2 is not None
+        q3_exist = q3 is not None
 
-        if credencial == "":  # q1.id == None:
+        # Se a credencial estiver vazia, desabilita todos os botões
+        if credencial == "":
             disable_button = True
-            return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_button, 'disable_button3': disable_button, 'credencial': credencial})
+            return render(request, 'loginUser.html', {
+                'disable_button1': disable_button,
+                'disable_button2': disable_button,
+                'disable_button3': disable_button,
+                'credencial': credencial
+            })
 
-        elif q1_exist == False:  # q1.id == None:
-            buscar_usuarios()
+        # Se q1 não existe, desabilita o botão correspondente
+        elif not q1_exist:
             disable_buttonfalse = False
             disable_button = True
-            return render(request, 'loginUser.html', {'disable_button1': disable_buttonfalse, 'disable_button2': disable_button, 'disable_button3': disable_button, 'credencial': credencial})
+            return render(request, 'loginUser.html', {
+                'disable_button1': disable_buttonfalse,
+                'disable_button2': disable_button,
+                'disable_button3': disable_button,
+                'credencial': credencial
+            })
 
-        elif q1_exist == True and q2_exist == False:  # q1.id != None:
+        # Se q1 existe mas q2 não, desabilita o botão de q2
+        elif q1_exist and not q2_exist:
             disable_buttonfalse = False
             disable_button = True
-            return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_buttonfalse, 'disable_button3': disable_button, 'credencial': credencial})
+            return render(request, 'loginUser.html', {
+                'disable_button1': disable_button,
+                'disable_button2': disable_buttonfalse,
+                'disable_button3': disable_button,
+                'credencial': credencial
+            })
 
-        if q2_exist == True and q3_exist == False:
+        # Se q2 existe mas q3 não, desabilita o botão de q3
+        elif q2_exist and not q3_exist:
             disable_buttonfalse = False
             disable_button = True
-            return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_button, 'disable_button3': disable_buttonfalse, 'credencial': credencial})
+            return render(request, 'loginUser.html', {
+                'disable_button1': disable_button,
+                'disable_button2': disable_button,
+                'disable_button3': disable_buttonfalse,
+                'credencial': credencial
+            })
 
-        elif q3_exist == True:
+        # Se todos os questionários existem, exibe uma mensagem
+        elif q3_exist:
             return HttpResponse("Você já preencheu todos os questionários")
 
 
