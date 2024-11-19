@@ -21,9 +21,10 @@ def questionario3(request):
         hiperv = request.POST.get('hiperv')
         outros = request.POST.get('outros')
 
-        quest3_envio = banco_quest3(id=id, nausea=nausea, vomito=vomito, tontura=tontura, suor=suor, palidez=palidez,
-                                    dorcab=dorcab, cansaco=cansaco, bocejo=bocejo, hiperv=hiperv, outros=outros)
+        if id is not None:
+            quest3_envio = banco_quest3(id=id, nausea=nausea, vomito=vomito, tontura=tontura, suor=suor,
+                                        palidez=palidez, dorcab=dorcab, cansaco=cansaco, bocejo=bocejo, hiperv=hiperv, outros=outros)
 
-        quest3_envio.save()
+            quest3_envio.save()
 
         return HttpResponse("oIE moreh")

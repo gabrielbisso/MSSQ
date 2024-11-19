@@ -18,9 +18,11 @@ def questionario2(request):
         oximetria = request.POST.get('oximetria')
         frequencia_card = request.POST.get('frequencia_card')
 
-        quest2_envio = banco_quest2(id=id, altura=altura, cintura=cintura, peso=peso, imc=imc,
+        if id is not None:
+            quest2_envio = banco_quest2(id=id, altura=altura, cintura=cintura, peso=peso, imc=imc,
                                     pressao=pressao, oximetria=oximetria, frequencia_card=frequencia_card)
 
-        quest2_envio.save()
+            quest2_envio.save()
+
 
         return render(request, 'questionario3.html')
