@@ -9,6 +9,7 @@ def questionario2(request):
         return render(request, 'questionario2.html')
 
     elif request.method == "POST":
+        id = request.POST.get('credencial')
         altura = request.POST.get('altura')
         cintura = request.POST.get('cintura')
         peso = request.POST.get('peso')
@@ -17,8 +18,8 @@ def questionario2(request):
         oximetria = request.POST.get('oximetria')
         frequencia_card = request.POST.get('frequencia_card')
 
-        quest2_envio = banco_quest2(altura=altura, cintura=cintura, peso=peso, imc=imc,
-                              pressao=pressao, oximetria=oximetria, frequencia_card=frequencia_card)
+        quest2_envio = banco_quest2(id=id, altura=altura, cintura=cintura, peso=peso, imc=imc,
+                                    pressao=pressao, oximetria=oximetria, frequencia_card=frequencia_card)
 
         quest2_envio.save()
 

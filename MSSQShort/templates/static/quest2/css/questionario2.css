@@ -76,3 +76,7 @@ body{
     padding: 15px 80px;
     font: 400 35px Inter, sans-serif;
   }
+
+  #credencial{
+    display: none;
+  }

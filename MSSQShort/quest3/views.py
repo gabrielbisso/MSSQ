@@ -9,6 +9,7 @@ def questionario3(request):
         return render(request, 'questionario3.html')
 
     elif request.method == "POST":
+        id = request.POST.get('credencial')
         nausea = request.POST.get('nausea')
         vomito = request.POST.get('vomito')
         tontura = request.POST.get('tontura')
@@ -20,7 +21,7 @@ def questionario3(request):
         hiperv = request.POST.get('hiperv')
         outros = request.POST.get('outros')
 
-        quest3_envio = banco_quest3(nausea=nausea, vomito=vomito, tontura=tontura, suor=suor, palidez=palidez,
+        quest3_envio = banco_quest3(id=id, nausea=nausea, vomito=vomito, tontura=tontura, suor=suor, palidez=palidez,
                                     dorcab=dorcab, cansaco=cansaco, bocejo=bocejo, hiperv=hiperv, outros=outros)
 
         quest3_envio.save()

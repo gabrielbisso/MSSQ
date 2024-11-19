@@ -23,8 +23,7 @@
     <h1 class="titulo">Medições Físicas e Sinais Vitais <br>para Avaliação de Saúde</h1>
     <hr class="linha">
     <form action="{% url 'questionario2' %}" method="POST">{% csrf_token %}
-        <p>Credencial</p>
-        <input type="text" name="credencial" value="{{ credencial }}">
+        <input style="display: none" id="credencial" type="text" name="credencial" value="{{ credencial }}">
 
         <p class="pergunta">1) Por favor, indique a altura (m) </p>
         <label class="resposta"> 
