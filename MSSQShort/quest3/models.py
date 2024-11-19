@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class quest3(models.Model):
+class banco_quest3(models.Model):
     nausea = models.FloatField(null=True, blank=True)
     vomito = models.FloatField(null=True, blank=True)
     tontura = models.FloatField(null=True, blank=True)

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import messages
-from .models import quest3
+from .models import banco_quest3
 
 
 def questionario3(request):
@@ -20,8 +20,8 @@ def questionario3(request):
         hiperv = request.POST.get('hiperv')
         outros = request.POST.get('outros')
 
-        quest3_envio = quest3(nausea=nausea, vomito=vomito, tontura=tontura, suor=suor, palidez=palidez,
-                              dorcab=dorcab, cansaco=cansaco, bocejo=bocejo, hiperv=hiperv, outros=outros)
+        quest3_envio = banco_quest3(nausea=nausea, vomito=vomito, tontura=tontura, suor=suor, palidez=palidez,
+                                    dorcab=dorcab, cansaco=cansaco, bocejo=bocejo, hiperv=hiperv, outros=outros)
 
         quest3_envio.save()
 

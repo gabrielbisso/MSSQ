@@ -2,8 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import messages
 from django.db import models
-from quest2.models import quest2
-from quest3.models import quest3
+from django.db import connection
+from quest1.models import banco_quest1
+from quest2.models import banco_quest2
+from quest3.models import banco_quest3
 
 
 def login_Adm(request):
@@ -30,27 +32,43 @@ def login_User(request):
 
     elif request.method == "POST":
         credencial = request.POST.get('credencial')
+        q1_exist = banco_quest1.objects.get(id=credencial).exists()
+        q2_exist = banco_quest2.objects.get(id=credencial).exists()
+        q3_exist = banco_quest3.objects.get(id=credencial).exists()
 
-        if credencial == "":
+        try:
+            q1 = banco_quest1.objects.get(id=credencial)
+            q1_exist = True
+            q2 = banco_quest2.objects.get(id=credencial)
+            q2_exist = True
+            q3 = banco_quest3.objects.get(id=credencial)
+            q3_exist = True
+        except User.DoesNotExist:
+            q1_exist = False
+            q2_exist = False
+            q3_exist = False
+
+        if credencial == "":  # q1.id == None:
             disable_button = True
             return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_button, 'disable_button3': disable_button, 'credencial': credencial})
 
-        elif credencial == "0":
+        elif q1_exist == False:  # q1.id == None:
+            buscar_usuarios()
             disable_buttonfalse = False
             disable_button = True
             return render(request, 'loginUser.html', {'disable_button1': disable_buttonfalse, 'disable_button2': disable_button, 'disable_button3': disable_button, 'credencial': credencial})
 
-        elif credencial == "1":
+        elif q1_exist == True and q2_exist == False:  # q1.id != None:
             disable_buttonfalse = False
             disable_button = True
             return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_buttonfalse, 'disable_button3': disable_button, 'credencial': credencial})
 
-        elif credencial == "2":
+        if q2_exist == True and q3_exist == False:
             disable_buttonfalse = False
             disable_button = True
             return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_button, 'disable_button3': disable_buttonfalse, 'credencial': credencial})
 
-        elif credencial == "3":
+        elif q3_exist == True:
             return HttpResponse("Você já preencheu todos os questionários")
 
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import messages
-from .models import quest2
+from .models import banco_quest2
 
 
 def questionario2(request):
@@ -17,7 +17,7 @@ def questionario2(request):
         oximetria = request.POST.get('oximetria')
         frequencia_card = request.POST.get('frequencia_card')
 
-        quest2_envio = quest2(altura=altura, cintura=cintura, peso=peso, imc=imc,
+        quest2_envio = banco_quest2(altura=altura, cintura=cintura, peso=peso, imc=imc,
                               pressao=pressao, oximetria=oximetria, frequencia_card=frequencia_card)
 
         quest2_envio.save()
