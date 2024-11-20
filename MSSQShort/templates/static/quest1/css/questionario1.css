@@ -1,4 +1,12 @@
-body, h1, h2, h3, p, ul, li, button, input {
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+button,
+input {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,14 +38,15 @@ body {
 }
 
 .section.is-active {
-    display: block; /* Exibe a seção ativa com cor diferente */
+    display: block;
+    /* Exibe a seção ativa com cor diferente */
 }
 
 /* Steps */
 .steps ul {
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     background-color: #04153B;
@@ -46,7 +55,7 @@ body {
 }
 
 .steps li {
-    margin: 0 15px; 
+    margin: 0 15px;
     color: #AAC1F2;
     text-align: center;
 }
@@ -93,7 +102,8 @@ body {
     color: #04153B;
 }
 
-.form .button, .form .submit {
+.form .button,
+.form .submit {
     background-color: #2156c7;
     padding: 10px 20px;
     color: #AAC1F2;
@@ -105,7 +115,8 @@ body {
     transition: background-color 0.3s;
 }
 
-.form .button:hover, .form .submit:hover {
+.form .button:hover,
+.form .submit:hover {
     background-color: #AAC1F2;
     color: #2156c7;
 }
@@ -123,6 +134,13 @@ h2 {
     color: #AAC1F2;
     text-align: center;
     margin: 15px;
+}
+
+p,
+li,
+button,
+input {
+    font-size: 16px;
 }
 
 .texto-centrado {
