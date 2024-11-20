@@ -24,5 +24,6 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('quest1/', include('quest1.urls')),
     path('quest2/', include('quest2.urls')),
-    path('quest3/', include('quest3.urls'))
+    path('quest3/', include('quest3.urls')),
+    path('', include('resultados.urls'))
 ]
