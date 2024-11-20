@@ -1,0 +1,82 @@
+@import url('https://fonts.cdnfonts.com/css/nunito');
+
+body{
+    background-color: #AAC1F2;
+}
+
+.titulo{
+    font-family: 'Nunito', sans-serif;
+    color: #04153B;
+    font-weight: bold;
+    font-size: 35px; 
+    text-align: center;
+    margin-top: 25px;
+}
+
+.linha{
+    background-color: white;
+    height: 1px;
+}
+.pergunta{
+    font-family: 'Nunito', sans-serif;
+    color: #04153B;
+    font-size: 20px; 
+    margin-left: 25px;
+}
+
+.resposta{
+    font-family: 'Nunito', sans-serif;
+    color: #04153B;
+    font-size: 20px; 
+    margin-left: 70px;
+}
+
+#caixatexto    {
+    border-radius: 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
+
+.divbot{
+    text-align: right;
+    margin-top: 30px;
+}
+
+#botao{
+    background-color: #04153b; 
+    color: white;
+    margin-right: 50px;
+}
+
+.header {
+    background-color: #04153b;
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 80px;
+    font: 400 35px Inter, sans-serif;
+  }
+
+  .footer {
+    background-color: #04153b;
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 80px;
+    font: 400 35px Inter, sans-serif;
+  }
+
+  #credencial{
+    display: none;
+  }
