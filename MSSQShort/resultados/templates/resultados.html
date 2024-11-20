@@ -1,0 +1,125 @@
+{% load static %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário infância e últimos anos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel='stylesheet' href="{% static 'resultados/css/resultados.css' %}">
+    <script src="{% static 'resultados/js/resultados.js' %}"></script>
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Coleta de Dados Durante a Simulação</h1>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-tachometer-alt"></i> Visão Geral
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-users"></i> Participantes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-chart-line"></i> Métricas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-file-alt"></i> Relatórios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-cogs"></i> Configurações
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="pt-3 pb-2 mb-3 border-bottom">
+                    <h2>Visão Geral do Experimento</h2>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p><strong>Participantes Totais:</strong> 50</p>
+                            <p><strong>Experimentos em Andamento:</strong> 3</p>
+                            <p><strong>Última Atualização:</strong> 20/11/2024</p>
+                        </div>
+                    </div>
+
+                    <!-- Participant Data Table -->
+                    <h3>Dados dos Participantes</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID do Participante</th>
+                                    <th>Frequência Cardíaca (bpm)</th>
+                                    <th>Saturação de Oxigênio (%)</th>
+                                    <th>Nível de Atividade</th>
+                                    <th>Última Atualização</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>P001</td>
+                                    <td>72</td>
+                                    <td>98</td>
+                                    <td>Moderado</td>
+                                    <td>20/11/2024 10:30</td>
+                                </tr>
+                                <tr>
+                                    <td>P002</td>
+                                    <td>68</td>
+                                    <td>97</td>
+                                    <td>Em Descanso</td>
+                                    <td>20/11/2024 10:20</td>
+                                </tr>
+                                <tr>
+                                    <td>P003</td>
+                                    <td>85</td>
+                                    <td>96</td>
+                                    <td>Ativo</td>
+                                    <td>20/11/2024 10:15</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Placeholder for Graphs -->
+                    <h3>Tendências de Saúde</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Gráficos serão exibidos aqui para acompanhar as métricas ao longo do tempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
