@@ -19,7 +19,7 @@ def login_Adm(request):
         senha = request.POST.get('senha')
 
         if usuario == "Admin" and senha == "12345":
-            return HttpResponse("Você foi logado com sucesso")
+            return render(request, 'resultados.html')
 
         elif usuario != "Admin" or senha != "12345":
             messages.error(request, "Usuário ou senha incorretos")
@@ -48,36 +48,36 @@ def login_User(request):
         q3_exist = q3 is not None
 
         # Se a credencial estiver vazia, desabilita todos os botões
-        if credencial == "":  
+        if credencial == "":
             disable_button = True
             return render(request, 'loginUser.html', {
-                'disable_button1': disable_button, 
-                'disable_button2': disable_button, 
-                'disable_button3': disable_button, 
+                'disable_button1': disable_button,
+                'disable_button2': disable_button,
+                'disable_button3': disable_button,
                 'credencial': credencial
             })
 
         # Se q1 não existe, desabilita o botão correspondente
-        elif not q1_exist: 
-            credencialglobal = credencial 
-            disable_buttonfalse = False
-            disable_button = True
-            return render(request, 'loginUser.html', {
-                'disable_button1': disable_buttonfalse, 
-                'disable_button2': disable_button, 
-                'disable_button3': disable_button, 
-                'credencial': credencial
-            })
-
-        # Se q1 existe mas q2 não, desabilita o botão de q2
-        elif q1_exist and not q2_exist:  
+        elif not q1_exist:
             credencialglobal = credencial
             disable_buttonfalse = False
             disable_button = True
             return render(request, 'loginUser.html', {
-                'disable_button1': disable_button, 
-                'disable_button2': disable_buttonfalse, 
-                'disable_button3': disable_button, 
+                'disable_button1': disable_buttonfalse,
+                'disable_button2': disable_button,
+                'disable_button3': disable_button,
+                'credencial': credencial
+            })
+
+        # Se q1 existe mas q2 não, desabilita o botão de q2
+        elif q1_exist and not q2_exist:
+            credencialglobal = credencial
+            disable_buttonfalse = False
+            disable_button = True
+            return render(request, 'loginUser.html', {
+                'disable_button1': disable_button,
+                'disable_button2': disable_buttonfalse,
+                'disable_button3': disable_button,
                 'credencial': credencial
             })
 
@@ -87,9 +87,9 @@ def login_User(request):
             disable_buttonfalse = False
             disable_button = True
             return render(request, 'loginUser.html', {
-                'disable_button1': disable_button, 
-                'disable_button2': disable_button, 
-                'disable_button3': disable_buttonfalse, 
+                'disable_button1': disable_button,
+                'disable_button2': disable_button,
+                'disable_button3': disable_buttonfalse,
                 'credencial': credencial
             })
 
@@ -109,3 +109,7 @@ def quest2(request):
 
 def quest3(request):
     return render(request, 'questionario3.html', {'credencial': credencialglobal})
+
+
+def resultados(request):
+    return render(request, 'resultados.html')

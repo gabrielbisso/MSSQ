@@ -22,6 +22,16 @@ body{
     color:white;
 }
 
+#usuario{
+    background-color: #04153b; 
+    color:white;
+}
+
+#senha{
+    background-color: #04153b; 
+    color:white;
+}
+
 #botao{
     background-color: #04153b; 
     color: white;

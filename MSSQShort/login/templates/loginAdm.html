@@ -12,7 +12,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 		<link rel="icon" href="{% static 'login/img/logotransparente.png' %}"  type="image/png"> 
-		<link rel='stylesheet' href="{% static 'login/css/loginAdm.css' %}">
+		<link rel="stylesheet" href="{% static 'login/css/loginadm.css' %}">
+		<script src="{% static 'login/js/loginadm.js' %}"></script>
 	</head>
 
 	<body>
@@ -37,16 +38,16 @@
 								<div class="input-group-append">
 									<span class="input-group-text" id="icone"><i id="iconedentro" class="fas fa-user"></i></span>
 								</div>
-								<input type="text" name="usuario" class="form-control input_user" id="formulario" value="" placeholder="Digite seu usuário">
+								<input type="text" name="usuario" class="form-control input_user" id="usuario" value="" placeholder="Digite seu usuário">
 							</div>
 							<div class="input-group mb-2">
 								<div class="input-group-append">
-									<span class="input-group-text"  id="icone"><i  id="iconedentro" class="fas fa-key"></i></span>
+									<span class="input-group-text" id="icone"><i id="iconedentro" class="fas fa-key"></i></span>
 								</div>
-								<input type="password" name="senha" class="form-control input_pass" id="formulario" value="" placeholder="Digite sua senha">
+								<input type="password" name="senha" class="form-control input_pass" id="senha" value="" placeholder="Digite sua senha">
 							</div>
 							<div class="d-flex justify-content-center mt-3 login_container">
-								<button type="submit" name="button" class="btn login_btn" id="botao">Login</button>
+								<button type="submit" name="button" class="btn login_btn" id="botao" onclick="chamarpagina()" disabled>Login</button>
 							</div>
 						</form>
 					</div>
