@@ -2,6 +2,7 @@
 
 body{
     background-color: #AAC1F2;
+   
 }
 
 .titulo{
@@ -50,17 +51,16 @@ body{
 }
 
 .header {
+
+    
     background-color: #04153b;
-    align-self: stretch;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
     align-items: flex-end;
     color: #fff;
     text-align: center;
     justify-content: center;
     padding: 15px 80px;
-    font: 400 35px Inter, sans-serif;
+    font-family: 'Nunito', sans-serif;
+    
   }
 
   .footer {
@@ -80,3 +80,43 @@ body{
   #credencial{
     display: none;
   }
+  
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.geral{
+
+   background-color: #d2e8ff;
+   padding-left: 20px;
+   padding-right: 20px;
+   
+   font-family: 'Nunito', sans-serif;
+   
+}
+
+.teste{
+    
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+.table-responsive{
+
+    font-family: 'Nunito', sans-serif;
+}
+    
+.footer {
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Faz o rodapé ocupar toda a largura */
+    background-color: #04153b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+  
