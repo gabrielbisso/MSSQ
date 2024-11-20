@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     $(document).ready(function () {
         $(".form .button").click(function () {
             const button = $(this);
-            const currentSection = button.closest(".section");
+            const currentSection = button.closest(".section"); // Ajustado para usar closest corretamente com jQuery
             const currentSectionIndex = currentSection.index();
             const headerSection = $('.steps li').eq(currentSectionIndex);
-            const nextSection = currentSection.next();
 
             // Verifica se todos os campos da seção atual estão preenchidos
             if (!validateCurrentSection(currentSection)) {
@@ -37,6 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Valida campos da seção atual
     function validateCurrentSection(section) {
+        // Verifica se o argumento é um elemento DOM ou jQuery e ajusta
+        if (section instanceof jQuery) {
+            section = section[0]; // Converte para elemento DOM se for jQuery
+        }
+
         const inputsInSection = section.querySelectorAll('input[type="text"]');
         const radiosInSection = section.querySelectorAll('input[type="radio"]');
 
