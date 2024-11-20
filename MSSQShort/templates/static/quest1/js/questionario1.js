@@ -7,18 +7,17 @@ document.addEventListener('DOMContentLoaded', function () {
     $(document).ready(function () {
         $(".form .button").click(function () {
             const button = $(this);
-            const currentSection = button.parents(".section");
-            console.log("Seção Atual: ", currentSection);
+            const currentSection = button.closest(".section");
             const currentSectionIndex = currentSection.index();
             const headerSection = $('.steps li').eq(currentSectionIndex);
             const nextSection = currentSection.next();
-            console.log("Próxima Seção: ", nextSection);
 
             // Verifica se todos os campos da seção atual estão preenchidos
             if (!validateCurrentSection(currentSection)) {
                 alert("Por favor, preencha todos os campos antes de continuar.");
                 return;
             }
+
             // Navegação entre seções
             currentSection.removeClass("is-active").next().addClass("is-active");
             headerSection.removeClass("is-active").next().addClass("is-active");
@@ -38,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Valida campos da seção atual
     function validateCurrentSection(section) {
-        const inputsInSection = section.find('input[type="text"]');
-        const radiosInSection = section.find('input[type="radio"]');
+        const inputsInSection = section.querySelectorAll('input[type="text"]');
+        const radiosInSection = section.querySelectorAll('input[type="radio"]');
 
         const allInputsFilled = Array.from(inputsInSection).every(input => input.value.trim() !== '');
         const atLeastOneRadioSelected = Array.from(radiosInSection).some(radio => radio.checked);
@@ -50,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Valida todos os campos para habilitar/desabilitar o botão
     function checkForm() {
         const allInputsFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-        const allRadiosSelected = Array.from(radios).some(radio => radio.checked);
+        const atLeastOneRadioSelected = Array.from(radios).some(radio => radio.checked);
 
-        submitButton.disabled = !(allInputsFilled && allRadiosSelected);
+        submitButton.disabled = !(allInputsFilled && atLeastOneRadioSelected);
     }
 
     // Adiciona eventos de input e change para validação em tempo real
