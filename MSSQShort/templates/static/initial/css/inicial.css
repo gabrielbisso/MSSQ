@@ -106,22 +106,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .team-title {
-  color: #fff;
+  color: #AAC1F2;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   align-self: center;
-  margin-left: 23px;
-  font: 600 50px Antonio, sans-serif;
+  margin-left: 2px;
   border: 1px solid transparent;
 }
 
 .team-members {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  display: flex;
   margin-top: 20px;
 }
 
@@ -160,14 +158,14 @@
 }
 
 .project-description {
-  color: #fff;
+  color: #AAC1F2;
   text-align: center;
   margin-top: 20px;
-  font: 400 18px Inter, sans-serif;
+  font-size: 14px;
 }
 
 .footer {
-  background-color: #04153b;
+  background-color: #AAC1F2;
   align-self: stretch;
   display: flex;
   min-height: 148px;
