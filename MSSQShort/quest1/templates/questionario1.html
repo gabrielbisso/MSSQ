@@ -33,23 +33,25 @@
                     <li>Questionário - Parte 2</li>
                 </ul>
             </div>
-            <form class="form" action="#" method="POST" id="formulario">
-                <div class="section-is-active">
+           <form class="form" id="formulario" action="{% url 'questionario1' %}" method="POST">{% csrf_token %}
+                <!-- <input style="display: none" id="credencial" type="text" name="credencial" value="{{ credencial }}"> -->
+            <div>
+                <div class="section is-active">
                     <h2>Informações Pessoais</h2>
                     <p class="idadep">Por favor, indique a sua idade:</p>
                     <label class="idadel">
-                        <input type="text" name="idade">
+                        <input type="text" name="idade" id="idadeInput">
                     </label>
-                        <p class="sexo"> Por favor, indique seu sexo: </p>
+                    <p class="sexo"> Por favor, indique seu sexo: </p>
                     <label class="sexol">
-                        <input type="radio" name="sexo" value="1" id="checksexo">
+                        <input type="radio" name="sexo" value="Masculino" id="sexoMasculino">
                         Masculino
                     </label><br>
                     <label class="sexol">
-                        <input type="radio" name="sexo" value="2" id="checksexo">
+                        <input type="radio" name="sexo" value="Feminino" id="sexoFeminino">
                         Feminino
                     </label><br>
-                    <button type="button" class="button">Próximo</button>
+                    <button type="button" class="button" id="botaoprox" >Próximo</button>
                 </div>
 
                 <div class="section">
@@ -527,12 +529,10 @@
                             Frequentemente sentiu enjoos
                         </label><br>
                     </div><br>
-                    <button type="submit" name="button" class="btn login_btn" id="botao" disabled> Enviar
-                        Respostas</button>
                 </div>
-                <div class="section">
-                    <h2>Questionário finalizado!</h2>
-                    <p>Agradecemos a sua participação!</p>
+            </div>
+            <div>
+                <button type="submit" id="botao" class="btn login_btn button">Enviar Respostas</button>
                 </div>
             </form>
         </div>

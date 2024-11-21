@@ -1,5 +1,4 @@
 function chamarpagina() {
-    alert("TESTE")
     window.open("resultados");
 }
 

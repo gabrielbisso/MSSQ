@@ -2,14 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const inputs = document.querySelectorAll('input[type="text"]');
     const radios = document.querySelectorAll('input[type="radio"]');
     const submitButton = document.getElementById('botao');
+    const idadeInput = document.getElementById('idadeInput');
+    const sexoRadios = document.querySelectorAll('input[type="radio"][name="sexo"]');
+    const submitButtoninicio = document.getElementById('botaoprox');
 
     // Configuração dos steps
     $(document).ready(function () {
         $(".form .button").click(function () {
-            const button = $(this);
-            const currentSection = button.closest(".section"); // Ajustado para usar closest corretamente com jQuery
-            const currentSectionIndex = currentSection.index();
-            const headerSection = $('.steps li').eq(currentSectionIndex);
+            const currentSection = document.querySelector(".section.is-active"); // Encontre a seção com a classe 'is-active'
+            if (!currentSection) {
+                console.error("A seção ativa não foi encontrada.");
+                return; // Se a seção ativa não for encontrada, não faz nada
+            }
+
+            const currentSectionIndex = Array.from(document.querySelectorAll('.form .section')).indexOf(currentSection); // Índice da seção ativa
+            const nextSection = currentSection.nextElementSibling;
 
             // Verifica se todos os campos da seção atual estão preenchidos
             if (!validateCurrentSection(currentSection)) {
@@ -18,13 +25,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             // Navegação entre seções
-            currentSection.removeClass("is-active").next().addClass("is-active");
+            currentSection.classList.remove("is-active");
+            if (nextSection) {
+                nextSection.classList.add("is-active");
+            }
+
+            const headerSection = $('.steps li').eq(currentSectionIndex);
             headerSection.removeClass("is-active").next().addClass("is-active");
 
             // Reinicia o formulário no final
-            if (currentSectionIndex === $('.form .section').length - 1) {
-                $(document).find(".form .section").first().addClass("is-active");
-                $(document).find(".steps li").first().addClass("is-active");
+            if (!nextSection) {
+                $(".form .section").first().addClass("is-active");
+                $(".steps li").first().addClass("is-active");
             }
         });
 
@@ -36,11 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Valida campos da seção atual
     function validateCurrentSection(section) {
-        // Verifica se o argumento é um elemento DOM ou jQuery e ajusta
-        if (section instanceof jQuery) {
-            section = section[0]; // Converte para elemento DOM se for jQuery
-        }
-
         const inputsInSection = section.querySelectorAll('input[type="text"]');
         const radiosInSection = section.querySelectorAll('input[type="radio"]');
 
@@ -58,10 +65,31 @@ document.addEventListener('DOMContentLoaded', function () {
         submitButton.disabled = !(allInputsFilled && atLeastOneRadioSelected);
     }
 
+    function checkFormButtonInicio() {
+        // Verifica se o campo idade foi preenchido corretamente
+        const isIdadeFilled = idadeInput.value.trim() !== '';
+
+        // Verifica se pelo menos um rádio de sexo foi selecionado
+        const isSexoSelected = Array.from(sexoRadios).some(radio => radio.checked);
+
+        // Habilita o botão somente quando ambos os campos estiverem válidos
+        submitButtoninicio.disabled = !(isIdadeFilled && isSexoSelected);
+    }
+
+    function chamarpagina()
+    {
+        window.open("questionario1");
+    }
+
+
     // Adiciona eventos de input e change para validação em tempo real
-    inputs.forEach(input => input.addEventListener('input', checkForm));
-    radios.forEach(radio => radio.addEventListener('change', checkForm));
+    inputs.forEach(input => input.addEventListener('input', checkForm)); // Para campos de texto
+    radios.forEach(radio => radio.addEventListener('change', checkForm)); // Para botões de rádio
+
+    idadeInput.addEventListener('input', checkFormButtonInicio); // Para campo de idade
+    sexoRadios.forEach(radio => radio.addEventListener('change', checkFormButtonInicio)); // Para botões de rádio
 
     // Chama a função inicialmente para garantir que o botão esteja no estado correto
     checkForm();
+    checkFormButtonInicio();
 });
