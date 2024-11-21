@@ -61,7 +61,7 @@ body {
 }
 
 .steps li.is-active {
-    color: #2156c7;
+    color: #1c3875;
 }
 
 /* Box do form */
@@ -104,7 +104,7 @@ body {
 
 .form .button,
 .form .submit {
-    background-color: #2156c7;
+    background-color: #1c3875;
     padding: 10px 20px;
     color: #AAC1F2;
     border: none;
@@ -118,7 +118,7 @@ body {
 .form .button:hover,
 .form .submit:hover {
     background-color: #AAC1F2;
-    color: #2156c7;
+    color: #1c3875;
 }
 
 /* Botões */
