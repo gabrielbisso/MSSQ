@@ -33,10 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const headerSection = $('.steps li').eq(currentSectionIndex);
             headerSection.removeClass("is-active").next().addClass("is-active");
 
-            // Reinicia o formulário no final
+            //Vai para página inicial
             if (!nextSection) {
-                $(".form .section").first().addClass("is-active");
-                $(".steps li").first().addClass("is-active");
+                window.location.href = "questionario1";
             }
         });
 
@@ -83,11 +82,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Adiciona eventos de input e change para validação em tempo real
-    inputs.forEach(input => input.addEventListener('input', checkForm)); // Para campos de texto
-    radios.forEach(radio => radio.addEventListener('change', checkForm)); // Para botões de rádio
+    inputs.forEach(input => input.addEventListener('input', checkForm)); 
+    radios.forEach(radio => radio.addEventListener('change', checkForm)); 
 
-    idadeInput.addEventListener('input', checkFormButtonInicio); // Para campo de idade
-    sexoRadios.forEach(radio => radio.addEventListener('change', checkFormButtonInicio)); // Para botões de rádio
+    idadeInput.addEventListener('input', checkFormButtonInicio); 
+    sexoRadios.forEach(radio => radio.addEventListener('change', checkFormButtonInicio)); 
 
     // Chama a função inicialmente para garantir que o botão esteja no estado correto
     checkForm();
