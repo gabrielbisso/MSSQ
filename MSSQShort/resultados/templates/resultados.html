@@ -14,6 +14,7 @@
     <script src="{% static 'resultados/js/resultados.js' %}"></script>
 </head>
 
+
 <body>
     
     <header class="header">
@@ -28,7 +29,6 @@
                 <div>
                     <p><strong>Participantes Totais:</strong> 50</p>
                     <p><strong>Experimentos em Andamento:</strong> 3</p>
-                    <p><strong>Aptos para viagem espacial:</strong> 10</p>
                     <p><strong>Última Atualização:</strong> 20/11/2024</p>
                 </div>
             </div>
@@ -75,6 +75,12 @@
             </div>
         </div>
 
+        <div class="testegráfico"> 
+
+            <canvas id="graficoBarras" ></canvas>
+            
+        </div>
+
         <!-- Dados Questionário 1: Últimos 10 Anos -->
         <div class="questionnaire-1-recent">
             <b><h3>Dados relacionados ao questionário 1 - Dados dos últimos 10 anos</h3></b>
@@ -116,6 +122,21 @@
             </div>
         </div>
 
+        <div class="testegráfico2"> 
+
+            <canvas id="graficoBarras2" ></canvas>
+            
+        </div>
+
+        <h3>Dados relacionados ao questionário 2</h3>
+
+        <div class="quadro">
+      
+         <canvas id="graficoBarra3" ></canvas>
+
+        </div>
+        
+
         <!-- Dados Questionário 3 -->
         <div class="questionnaire-3">
             <h3>Dados relacionados ao questionário 3</h3>
@@ -152,11 +173,305 @@
                 </table>
             </div>
         </div>
+
+        <div class="testegrafico4">
+      
+          <canvas id="graficoBarra4" ></canvas>
+ 
+         </div>
+         
+       
+
     </main>
 
     <footer class="footer">
         <!-- Conteúdo do rodapé -->
     </footer>
+</body>
+
+</html>
+
+<script>
+    var ctx = document.getElementById('graficoBarras').getContext('2d');
+    var graficoBarras = new Chart(ctx, {
+      type: 'bar', // Tipo de gráfico (barra)
+      data: {
+        labels: ['Não aplicável', 'Nunca sentiu ', 'Raramente sentiu ', 'Algumas vezes sentiu ', 'Frequentemente'], // Rótulos do eixo X
+        datasets: [{
+          label: 'Carro', // Título do gráfico
+          data: [50, 30, 4, 15, 6], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 0, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Autocarros', // Título do gráfico
+          data: [50, 15, 10, 20, 45], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Comboios', // Título do gráfico
+          data: [50, 70, 40, 90, 60], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Aviões', // Título do gráfico
+          data: [50, 70, 40, 90, 60], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(0, 255, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Embarcações pequenas', // Título do gráfico
+          data: [50, 70, 40, 90, 60], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(0, 0, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Navios', // Título do gráfico
+          data: [50, 70, 40, 90, 60], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Montanhas Russas', // Título do gráfico
+          data: [50, 70, 40, 90, 60], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(100, 55, 155)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+    ]
+      },
+      options: {
+        responsive: true, // Tornar o gráfico responsivo
+        scales: {
+          y: {
+            beginAtZero: true // Começar a escala do eixo Y do zero
+          }
+        }
+      }
+    });
+
+    var ctx = document.getElementById('graficoBarras2').getContext('2d');
+    var graficoBarras = new Chart(ctx, {
+      type: 'bar', // Tipo de gráfico (barra)
+      data: {
+        labels: ['Não aplicável', 'Nunca sentiu ', 'Raramente sentiu ', 'Algumas vezes sentiu ', 'Frequentemente'], // Rótulos do eixo X
+        datasets: [{
+          label: 'Carro', // Título do gráfico
+          data: [50, 70, 40, 90, 50], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 0, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Autocarros', // Título do gráfico
+          data: [50, 70, 40, 90, 40], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Comboios', // Título do gráfico
+          data: [50, 70, 40, 90, 30], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Aviões', // Título do gráfico
+          data: [50, 70, 40, 90, 20], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(0, 255, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Embarcações pequenas', // Título do gráfico
+          data: [50, 70, 40, 90, 10], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(0, 0, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Navios', // Título do gráfico
+          data: [50, 70, 40, 90, 30], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Montanhas Russas', // Título do gráfico
+          data: [50, 70, 40, 90, 60], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(100, 55, 155)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+    ]
+      },
+      options: {
+        responsive: true, // Tornar o gráfico responsivo
+        scales: {
+          y: {
+            beginAtZero: true // Começar a escala do eixo Y do zero
+          }
+        }
+      }
+    });
+
+    var ctx = document.getElementById('graficoBarra3').getContext('2d');
+    var graficoBarras = new Chart(ctx, {
+      type: 'bar', // Tipo de gráfico (barra)
+      data: {
+        labels: ['Não aplicável'], // Rótulos do eixo X
+        datasets: [{
+          label: 'Altura', // Título do gráfico
+          data: [1,75], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 0, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Cintura Abdominal', // Título do gráfico
+          data: [1,2], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Peso', // Título do gráfico
+          data: [74,56], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Nível de oxigênio no sangue', // Título do gráfico
+          data: [96], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 0, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+    ]
+      },
+      options: {
+    responsive: true,  // Tornar o gráfico responsivo
+    maintainAspectRatio: false,  // Permite que o gráfico ocupe 100% do tamanho da div
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+var ctx = document.getElementById('graficoBarra4').getContext('2d');
+    var graficoBarras = new Chart(ctx, {
+      type: 'bar', // Tipo de gráfico (barra)
+      data: {
+        labels: ['Náusea/enjoo/vontade de vomitar'], // Rótulos do eixo X
+        datasets: [{
+          label: 'Náusea/enjoo/vontade de vomitar', // Título do gráfico
+          data: [5], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 0, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Vômito', // Título do gráfico
+          data: [7], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Tontura ou desequilíbrio', // Título do gráfico
+          data: [8], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(255, 255, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+        {
+        label: 'Suor excessivo ou frio', // Título do gráfico
+          data: [4], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(80, 45, 17)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Palidez', // Título do gráfico
+          data: [2], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(227, 74, 53)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Dor de cabeça', // Título do gráfico
+          data: [14], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(100, 255, 100)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Cansaço ou sono', // Título do gráfico
+          data: [20], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(175, 50, 80)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Bocejo frequente', // Título do gráfico
+          data: [5], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(160, 160, 0)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        },
+
+        {
+        label: 'Hiperventilação/respiração rápida', // Título do gráfico
+          data: [3], // Dados (números) que serão exibidos nas barras
+          backgroundColor: 'rgba(155, 50, 255)', // Cor de fundo das barras
+          borderColor: 'rgba(0, 0, 0)', // Cor da borda das barras
+          borderWidth: 2 // Largura da borda
+        }
+
+
+    ]
+      },
+      options: {
+    responsive: true,  // Tornar o gráfico responsivo
+    maintainAspectRatio: false,  // Permite que o gráfico ocupe 100% do tamanho da div
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+
+</script>
+  
 </body>
 
 </html>
