@@ -2,7 +2,11 @@
 
 body{
     background-color: #AAC1F2;
-   
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    overflow-y: auto;   /* Permite rolagem vertical */
+
+ 
+  height: 100vh;
 }
 
 .titulo{
@@ -75,6 +79,7 @@ body{
     justify-content: center;
     padding: 15px 80px;
     font: 400 35px Inter, sans-serif;
+    margin-top: auto; /* Empurra o rodapé para o final da página */
   }
 
   #credencial{
@@ -109,7 +114,6 @@ body{
     
 .footer {
     
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%; /* Faz o rodapé ocupar toda a largura */
@@ -117,6 +121,55 @@ body{
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+#graficoBarras {
+        width: 2px;   /* Largura do gráfico */
+        height: 1px;  /* Altura do gráfico */
+}
+
+.testegráfico {
+        width: 2000px;   /* Largura da div */
+        height: 250px;  /* Altura da div */
+        /* Opcional: Definir um borda ou outro estilo para a div */
+        border: 1px solid #ccc;
+}
+
+#graficoBarras2 {
+    width: 2px;   /* Largura do gráfico */
+    height: 1px;  /* Altura do gráfico */
+}
+
+.testegráfico2 {
+    width: 2000px;   /* Largura da div */
+    height: 250px;  /* Altura da div */
+    /* Opcional: Definir um borda ou outro estilo para a div */
+    border: 1px solid #ccc;
+}
+
+.quadro {
+    width:2000px;   /* Largura da div */
+    height: 250px;  /* Altura da div */
+    /* Opcional: Definir um borda ou outro estilo para a div */
+    border: 1px solid #ccc;
+}
+
+#graficoBarras3 {
+    width: 100%;  /* Ajuste a largura do canvas para 100% da div pai */
+    height: 100%; /* Ajuste a altura do canvas para 100% da div pai */
+}
+
+#graficoBarras4 {
+    width: 100%;  /* Ajuste a largura do canvas para 100% da div pai */
+    height: 100%; /* Ajuste a altura do canvas para 100% da div pai */
+}
+
+.testegráfico4 {
+    width: 2000px;   /* Largura da div */
+    height: 250px;  /* Altura da div */
+    /* Opcional: Definir um borda ou outro estilo para a div */
+    border: 1px solid #ccc;
+}
 }
 
   
