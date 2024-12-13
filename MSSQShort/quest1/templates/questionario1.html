@@ -26,17 +26,9 @@
     </header>
     <div class="box">
         <div class="formulario">
-            <div class="steps">
-                <ul>
-                    <li class="is-active">Informações Pessoais</li>
-                    <li>Questionário - Parte 1</li>
-                    <li>Questionário - Parte 2</li>
-                </ul>
-            </div>
            <form class="form" id="formulario" action="{% url 'questionario1' %}" method="POST">{% csrf_token %}
                 <!-- <input style="display: none" id="credencial" type="text" name="credencial" value="{{ credencial }}"> -->
             <div>
-                <div class="section is-active">
                     <h2>Informações Pessoais</h2>
                     <p class="idadep">Por favor, indique a sua idade:</p>
                     <label class="idadel">
@@ -51,11 +43,8 @@
                         <input type="radio" name="sexo" value="Feminino" id="sexoFeminino">
                         Feminino
                     </label><br>
-                    <button type="button" class="button" id="botaoprox" >Próximo</button>
-                </div>
-
-                <div class="section">
-                    <h2>Questionário - Parte 1</h2>
+        
+                    <h2>Questionário Infância</h2>
                     <p class="explicacaop">
                         Este questionário foi concebido para avaliar o seu grau de suscetibilidade ao enjoo de
                         movimento, e quais os tipos de movimento mais suscetíveis de causar esse enjoo. Enjoo, neste
@@ -68,7 +57,7 @@
 
                     <!-- Pergunta 1 -->
                     <div class="pergunta">
-                        <p>1. Carros </p>
+                        <p class= itens>1. Carros </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta1" value="1" id="check1">
                             Não aplicável
@@ -93,7 +82,7 @@
 
                     <!-- Pergunta 2 -->
                     <div class="pergunta">
-                        <p>2. Autocarros </p>
+                        <p class= itens>2. Autocarros </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta2" value="1" id="check2">
                             Não aplicável
@@ -118,7 +107,7 @@
 
                     <!-- Pergunta 3 -->
                     <div class="pergunta">
-                        <p>3. Comboios </p>
+                        <p class= itens>3. Comboios </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta3" value="1" id="check3">
                             Não aplicável
@@ -143,7 +132,7 @@
 
                     <!-- Pergunta 4 -->
                     <div class="pergunta">
-                        <p>4. Aviões </p>
+                        <p class= itens>4. Aviões </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta4" value="1" id="check4">
                             Não aplicável
@@ -168,7 +157,7 @@
 
                     <!-- Pergunta 5 -->
                     <div class="pergunta">
-                        <p>5. Embarcações pequenas </p>
+                        <p class= itens>5. Embarcações pequenas </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta5" value="1" id="check5">
                             Não aplicável
@@ -193,7 +182,7 @@
 
                     <!-- Pergunta 6 -->
                     <div class="pergunta">
-                        <p>6. Navios, por exemplo, Ferries </p>
+                        <p class= itens>6. Navios, por exemplo, Ferries </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta6" value="1" id="check6">
                             Não aplicável
@@ -218,7 +207,7 @@
 
                     <!-- Pergunta 7 -->
                     <div class="pergunta">
-                        <p>7. Baloiços em parques infantis </p>
+                        <p class= itens>7. Baloiços em parques infantis </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta7" value="1" id="check7">
                             Não aplicável
@@ -243,7 +232,7 @@
 
                     <!-- Pergunta 8 -->
                     <div class="pergunta">
-                        <p>8. Carroséis em parques infantis </p>
+                        <p class= itens>8. Carroséis em parques infantis </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta8" value="1" id="check8">
                             Não aplicável
@@ -268,7 +257,7 @@
 
                     <!-- Pergunta 9 -->
                     <div class="pergunta">
-                        <p>9. Montanhas Russas, Diversões </p>
+                        <p class= itens>9. Montanhas Russas, Diversões </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta9" value="1" id="check9">
                             Não aplicável
@@ -290,10 +279,8 @@
                             Frequentemente sentiu enjoos
                         </label><br>
                     </div><br>
-                    <button type="button" class="button">Próximo</button>
-                </div>
-                <div class="section">
-                    <h2>Questionário - Parte 2</h2>
+                    
+                    <h2>Questionário últimos 10 anos</h2>
                     <p class="explicacao10"> Este questionário foi concebido para avaliar o seu grau de suscetibilidade
                         ao enjoo de
                         movimento, e quais os tipos de movimento mais suscetíveis de causar esse enjoo. Enjoo, neste
@@ -307,7 +294,7 @@
 
                     <!-- Pergunta 1 -->
                     <div class="pergunta">
-                        <p>1. Carros </p>
+                        <p class= itens>1. Carros </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta1.2" value="1" id="check1.2">
                             Não aplicável
@@ -332,7 +319,7 @@
 
                     <!-- Pergunta 2 -->
                     <div class="pergunta">
-                        <p>2. Autocarros </p>
+                        <p class= itens>2. Autocarros </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta2.2" value="1" id="check2.2">
                             Não aplicável
@@ -357,7 +344,7 @@
 
                     <!-- Pergunta 3 -->
                     <div class="pergunta">
-                        <p>3. Comboios </p>
+                        <p class= itens>3. Comboios </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta3.2" value="1" id="check3.2">
                             Não aplicável
@@ -382,7 +369,7 @@
 
                     <!-- Pergunta 4 -->
                     <div class="pergunta">
-                        <p>4. Aviões </p>
+                        <p class= itens>4. Aviões </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta4.2" value="1" id="check4.2">
                             Não aplicável
@@ -407,7 +394,7 @@
 
                     <!-- Pergunta 5 -->
                     <div class="pergunta">
-                        <p>5. Embarcações pequenas </p>
+                        <p class= itens>5. Embarcações pequenas </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta5.2" value="1" id="check5.2">
                             Não aplicável
@@ -432,7 +419,7 @@
 
                     <!-- Pergunta 6 -->
                     <div class="pergunta">
-                        <p>6. Navios, por exemplo, Ferries </p>
+                        <p class= itens>6. Navios, por exemplo, Ferries </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta6.2" value="1" id="check6.2">
                             Não aplicável
@@ -457,7 +444,7 @@
 
                     <!-- Pergunta 7 -->
                     <div class="pergunta">
-                        <p>7. Baloiços em parques infantis </p>
+                        <p class= itens>7. Baloiços em parques infantis </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta7.2" value="1" id="check7.2">
                             Não aplicável
@@ -482,7 +469,7 @@
 
                     <!-- Pergunta 8 -->
                     <div class="pergunta">
-                        <p>8. Carroséis em parques infantis </p>
+                        <p class= itens>8. Carroséis em parques infantis </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta8.2" value="1" id="check8.2">
                             Não aplicável
@@ -507,7 +494,7 @@
 
                     <!-- Pergunta 9 -->
                     <div class="pergunta">
-                        <p>9. Montanhas Russas, Diversões </p>
+                        <p class= itens>9. Montanhas Russas, Diversões </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta9.2" value="1" id="check9.2">
                             Não aplicável
@@ -529,9 +516,8 @@
                             Frequentemente sentiu enjoos
                         </label><br>
                     </div><br>
-                </div>
             </div>
-            <div>
+                <div>
                 <button type="submit" id="botao" class="btn login_btn button">Enviar Respostas</button>
                 </div>
             </form>

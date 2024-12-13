@@ -32,38 +32,6 @@ body {
     color: #AAC1F2;
 }
 
-/* Seções */
-.section {
-    display: none;
-}
-
-.section.is-active {
-    display: block;
-    /* Exibe a seção ativa com cor diferente */
-}
-
-/* Steps */
-.steps ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #04153B;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.steps li {
-    margin: 0 15px;
-    color: #AAC1F2;
-    text-align: center;
-}
-
-.steps li.is-active {
-    color: #1c3875;
-}
-
 /* Box do form */
 .box {
     width: 100%;
@@ -133,6 +101,18 @@ h2 {
     font-weight: 200;
     color: #AAC1F2;
     text-align: center;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.pergunta {
+    justify-content: left;
+    text-align: left;
+    margin: 5px;
+}
+
+.itens {
+    font-weight: bold;
     margin: 15px;
 }
 
