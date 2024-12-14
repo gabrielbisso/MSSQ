@@ -1,5 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/nunito');
+
 body,
-h1,
 h2,
 h3,
 p,
@@ -10,11 +11,20 @@ input {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+
+.logo {
+    aspect-ratio: 1.68;
+    object-fit: contain;
+    object-position: center;
+    width: 300px;
+    margin: 10px;
+    max-width: 100%;
 }
 
 body {
-    background-color: #AAC1F2;
+    background-color: #04153B;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,12 +34,11 @@ body {
 /* Cabeçalho */
 .header {
     width: 100%;
-    background-color: #04153B;
+    background-color: #AAC1F2;
     text-align: center;
     padding: 20px 0;
     font-size: 35px;
     font-weight: 400;
-    color: #AAC1F2;
 }
 
 /* Box do form */
@@ -38,12 +47,12 @@ body {
     max-width: 700px;
     margin: 10px;
     padding: 20px;
-    background-color: #04153B;
+    background-color: #AAC1F2;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
-    color: #AAC1F2;
+    color: #04153B;
     text-align: center;
 }
 
@@ -64,6 +73,7 @@ body {
     background-color: #AAC1F2;
     border: none;
     border-radius: 5px;
+    border-color: #04153B;
     width: 50%;
     outline: none;
     font-size: 14px;
@@ -72,34 +82,35 @@ body {
 
 .form .button,
 .form .submit {
-    background-color: #1c3875;
-    padding: 10px 20px;
+    background-color: #04153b;
     color: #AAC1F2;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+    margin-right: 50px;
 }
 
-.form .button:hover,
-.form .submit:hover {
-    background-color: #AAC1F2;
-    color: #1c3875;
+#idadeInput {
+    border-radius: 20px;
+    padding: 8px;
+    border: 1px solid #04153B;
+    font-size: 12px;
 }
 
 /* Botões */
 .divbot {
+    justify-content: center;
     text-align: center;
     margin-top: 30px;
+}
+
+#botao {
+    background-color: #04153b;
+    color: #AAC1F2;
 }
 
 /* Textos */
 h2 {
     font-size: 35px;
     font-weight: 200;
-    color: #AAC1F2;
+    color: #04153B;
     text-align: center;
     margin: 15px;
     font-weight: bold;
@@ -121,10 +132,4 @@ li,
 button,
 input {
     font-size: 16px;
-}
-
-.texto-centrado {
-    font-size: 14px;
-    color: #AAC1F2;
-    text-align: center;
 }

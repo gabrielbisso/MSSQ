@@ -6,120 +6,122 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário Pós Experimento</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link rel="icon" href="{% static 'login/img/logotransparente.png' %}"  type="image/png"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="icon" href="{% static 'login/img/logotransparente.png' %}" type="image/png">
     <link rel='stylesheet' href="{% static 'quest3/css/questionario3.css' %}">
     <script src="{% static 'quest3/js/questionario3.js' %}"></script>
 </head>
 
 <body>
     <header class="header">
-        <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/54cb28b31242bde04c9dc771e3c1b5bb2d1f503ae5889d6c05f9df14c1650ef9?placeholderIfAbsent=true&apiKey=ca76908c09d645f09c52cbff3ba78418 [cdn.builder.io]"
-        alt="Motion Sickness Test Logo"
-        class="logo">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/54cb28b31242bde04c9dc771e3c1b5bb2d1f503ae5889d6c05f9df14c1650ef9?placeholderIfAbsent=true&apiKey=ca76908c09d645f09c52cbff3ba78418 [cdn.builder.io]"
+            alt="Motion Sickness Test Logo" class="logo">
     </header>
     <h1 class="titulo">Teste Pós Experimento</h1><br>
     <div class="box">
         <div class="form">
             <form action="{% url 'questionario3' %}" method="POST">{% csrf_token %}
                 <input style="display: none" id="id" type="text" name="id" value="{{ id }}">
-                <p class="sintoma">
-                   Após o experimento, indique se você apresentou algum sinal ou sintoma abaixo:<br>
+                <p class="pergunta">
+                    Após o experimento, indique se você apresentou algum sinal ou sintoma abaixo:<br>
                 </p>
-        
+
                 <!--Sintoma 1 -->
                 <div class="sintoma">
                     <label class="sintoma">
                         <input type="checkbox" name="nausea" value="1">
                         Náusea/Sensação de enjoo
                     </label><br>
-                </div> 
-        
+                </div>
+
                 <!--Sintoma 2 -->
                 <div class="sintoma">
                     <label class="sintoma">
                         <input type="checkbox" name="vomito" value="2">
                         Vômito
                     </label><br>
-                </div> 
-        
+                </div>
+
                 <!--Sintoma 3 -->
                 <div class="sintoma">
                     <label class="sintoma">
                         <input type="checkbox" name="tontura" value="3">
                         Tontura/Sensação de Desequilíbrio
                     </label><br>
-                </div> 
-        
+                </div>
+
                 <!--Sintoma 4 -->
                 <div class="sintoma">
                     <label class="sintoma">
                         <input type="checkbox" name="suor" value="4">
                         Suor excessivo e frio
                     </label><br>
-                </div> 
-        
+                </div>
+
                 <!--Sintoma 5 -->
                 <div class="sintoma">
                     <label class="sintoma">
                         <input type="checkbox" name="palidez" value="5">
                         Palidez
                     </label><br>
-                </div> 
-        
+                </div>
+
                 <!--Sintoma 6 -->
                 <div class="sintoma">
                     <label class="sintoma">
                         <input type="checkbox" name="dorcab" value="6">
                         Dor de cabeça
                     </label><br>
-                </div> 
-        
+                </div>
+
                 <!--Sintoma 7 -->
                 <div class="sintoma">
                     <label class="sintoma">
                         <input type="checkbox" name="cansaco" value="7">
                         Sensação de cansaço ou necessidade de dormir
                     </label><br>
-                </div> 
-        
+                </div>
+
                 <!--Sintoma 8 -->
                 <div class="sintoma">
                     <label class="sintoma">
                         <input type="checkbox" name="bocejo" value="8">
                         Bocejos frequentes
                     </label><br>
-                </div> 
-        
+                </div>
+
                 <!--Sintoma 9 -->
                 <div class="sintoma">
                     <label class="sintoma">
                         <input type="checkbox" name="hiperv" value="9">
-                        Hiperventilação/Respiração rápida e profunda 
+                        Hiperventilação/Respiração rápida e profunda
                     </label><br>
-                </div> 
-        
+                </div>
+
                 <!--Sintoma 10 -->
                 <div class="sintoma">
                     <label for="outros">
                         <p class="sintoma">Outros:</p>
-                        <textarea class="sintoma" id="outros" name="outros" rows="4" cols="50" placeholder="Digite seu comentário aqui..."></textarea>
+                        <textarea class="sintoma" id="outros" name="outros" rows="4" cols="50"
+                            placeholder="Digite seu comentário aqui..."></textarea>
                     </label>
                     <br>
                     </p>
-                </div> 
-        
+                </div>
+
                 <div class="divbot">
                     <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
-                </div></p>
+                </div>
+                </p>
             </form>
         </div>
     </div>

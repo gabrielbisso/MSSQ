@@ -2,7 +2,7 @@
 
 .header {
     width: 100%;
-    background-color: #04153B;
+    background-color: #AAC1F2;
     text-align: center;
     padding: 20px 0;
     font-size: 35px;
@@ -25,13 +25,13 @@ body {
     width: 300px;
     margin: 10px;
     max-width: 100%;
-  }  
+}
 
-.titulo{
+.titulo {
     font-family: 'Nunito', sans-serif;
     color: #AAC1F2;
     font-weight: bold;
-    font-size: 35px; 
+    font-size: 35px;
     text-align: center;
     margin-top: 25px;
 }
@@ -50,33 +50,37 @@ body {
     text-align: center;
 }
 
-.pergunta{
+.pergunta {
     font-family: 'Nunito', sans-serif;
     color: #04153B;
-    font-size: 20px; 
+    font-size: 20px;
     margin-left: 25px;
+    justify-content: center;
+    text-align: center;
 }
 
-.sintoma{
+.sintoma {
     font-family: 'Nunito', sans-serif;
     color: #04153B;
-    font-size: 20px; 
+    font-size: 20px;
     margin-left: 25px;
+    justify-content: left;
+    text-align: left;
 }
 
-.divbot{
+.divbot {
     text-align: right;
     margin-top: 30px;
 }
 
-#botao{
-    background-color: #04153b; 
-    color: white;
+#botao {
+    background-color: #04153b;
+    color: #AAC1F2;
     margin-right: 50px;
 }
 
 
-  .footer {
+.footer {
     background-color: #04153b;
     align-self: stretch;
     display: flex;
@@ -88,4 +92,4 @@ body {
     justify-content: center;
     padding: 15px 80px;
     font: 400 35px Inter, sans-serif;
-  }
+}

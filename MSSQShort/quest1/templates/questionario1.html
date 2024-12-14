@@ -15,20 +15,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
         integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-	<link rel="icon" href="{% static 'login/img/logotransparente.png' %}"  type="image/png"> 
+    <link rel="icon" href="{% static 'login/img/logotransparente.png' %}" type="image/png">
     <link rel='stylesheet' href="{% static 'quest1/css/questionario1.css' %}">
     <script src="{% static 'quest1/js/quest1.js' %}"></script>
 </head>
 
 <body>
     <header class="header">
-        <h1>MSSQShort</h1>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/54cb28b31242bde04c9dc771e3c1b5bb2d1f503ae5889d6c05f9df14c1650ef9?placeholderIfAbsent=true&apiKey=ca76908c09d645f09c52cbff3ba78418 [cdn.builder.io]"
+            alt="Motion Sickness Test Logo" class="logo">
     </header>
     <div class="box">
         <div class="formulario">
-           <form action="{% url 'questionario1' %}" method="POST">{% csrf_token %}
+            <form action="{% url 'questionario1' %}" method="POST">{% csrf_token %}
                 <input style="display: none" id="id" type="text" name="id" value="{{ id }}">
-            <div>
+                <div>
                     <h2>Informações Pessoais</h2>
                     <p class="idadep">Por favor, indique a sua idade:</p>
                     <label class="idadel">
@@ -43,7 +44,7 @@
                         <input type="radio" name="sexo" value="2" id="sexoFeminino">
                         Feminino
                     </label><br>
-        
+
                     <h2>Questionário Infância</h2>
                     <p class="explicacaop">
                         Este questionário foi concebido para avaliar o seu grau de suscetibilidade ao enjoo de
@@ -57,7 +58,7 @@
 
                     <!-- Pergunta 1 -->
                     <div class="pergunta">
-                        <p class= itens>1. Carros </p>
+                        <p class=itens>1. Carros </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta1" value="1" id="check1">
                             Não aplicável
@@ -82,7 +83,7 @@
 
                     <!-- Pergunta 2 -->
                     <div class="pergunta">
-                        <p class= itens>2. Autocarros </p>
+                        <p class=itens>2. Autocarros </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta2" value="1" id="check2">
                             Não aplicável
@@ -107,7 +108,7 @@
 
                     <!-- Pergunta 3 -->
                     <div class="pergunta">
-                        <p class= itens>3. Comboios </p>
+                        <p class=itens>3. Comboios </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta3" value="1" id="check3">
                             Não aplicável
@@ -132,7 +133,7 @@
 
                     <!-- Pergunta 4 -->
                     <div class="pergunta">
-                        <p class= itens>4. Aviões </p>
+                        <p class=itens>4. Aviões </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta4" value="1" id="check4">
                             Não aplicável
@@ -157,7 +158,7 @@
 
                     <!-- Pergunta 5 -->
                     <div class="pergunta">
-                        <p class= itens>5. Embarcações pequenas </p>
+                        <p class=itens>5. Embarcações pequenas </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta5" value="1" id="check5">
                             Não aplicável
@@ -182,7 +183,7 @@
 
                     <!-- Pergunta 6 -->
                     <div class="pergunta">
-                        <p class= itens>6. Navios, por exemplo, Ferries </p>
+                        <p class=itens>6. Navios, por exemplo, Ferries </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta6" value="1" id="check6">
                             Não aplicável
@@ -207,7 +208,7 @@
 
                     <!-- Pergunta 7 -->
                     <div class="pergunta">
-                        <p class= itens>7. Baloiços em parques infantis </p>
+                        <p class=itens>7. Baloiços em parques infantis </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta7" value="1" id="check7">
                             Não aplicável
@@ -232,7 +233,7 @@
 
                     <!-- Pergunta 8 -->
                     <div class="pergunta">
-                        <p class= itens>8. Carroséis em parques infantis </p>
+                        <p class=itens>8. Carroséis em parques infantis </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta8" value="1" id="check8">
                             Não aplicável
@@ -257,7 +258,7 @@
 
                     <!-- Pergunta 9 -->
                     <div class="pergunta">
-                        <p class= itens>9. Montanhas Russas, Diversões </p>
+                        <p class=itens>9. Montanhas Russas, Diversões </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta9" value="1" id="check9">
                             Não aplicável
@@ -279,7 +280,7 @@
                             Frequentemente sentiu enjoos
                         </label><br>
                     </div><br>
-                    
+
                     <h2>Questionário últimos 10 anos</h2>
                     <p class="explicacao10"> Este questionário foi concebido para avaliar o seu grau de suscetibilidade
                         ao enjoo de
@@ -294,7 +295,7 @@
 
                     <!-- Pergunta 1 -->
                     <div class="pergunta">
-                        <p class= itens>1. Carros </p>
+                        <p class=itens>1. Carros </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta1.2" value="1" id="check1.2">
                             Não aplicável
@@ -319,7 +320,7 @@
 
                     <!-- Pergunta 2 -->
                     <div class="pergunta">
-                        <p class= itens>2. Autocarros </p>
+                        <p class=itens>2. Autocarros </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta2.2" value="1" id="check2.2">
                             Não aplicável
@@ -344,7 +345,7 @@
 
                     <!-- Pergunta 3 -->
                     <div class="pergunta">
-                        <p class= itens>3. Comboios </p>
+                        <p class=itens>3. Comboios </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta3.2" value="1" id="check3.2">
                             Não aplicável
@@ -369,7 +370,7 @@
 
                     <!-- Pergunta 4 -->
                     <div class="pergunta">
-                        <p class= itens>4. Aviões </p>
+                        <p class=itens>4. Aviões </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta4.2" value="1" id="check4.2">
                             Não aplicável
@@ -394,7 +395,7 @@
 
                     <!-- Pergunta 5 -->
                     <div class="pergunta">
-                        <p class= itens>5. Embarcações pequenas </p>
+                        <p class=itens>5. Embarcações pequenas </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta5.2" value="1" id="check5.2">
                             Não aplicável
@@ -419,7 +420,7 @@
 
                     <!-- Pergunta 6 -->
                     <div class="pergunta">
-                        <p class= itens>6. Navios, por exemplo, Ferries </p>
+                        <p class=itens>6. Navios, por exemplo, Ferries </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta6.2" value="1" id="check6.2">
                             Não aplicável
@@ -444,7 +445,7 @@
 
                     <!-- Pergunta 7 -->
                     <div class="pergunta">
-                        <p class= itens>7. Baloiços em parques infantis </p>
+                        <p class=itens>7. Baloiços em parques infantis </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta7.2" value="1" id="check7.2">
                             Não aplicável
@@ -469,7 +470,7 @@
 
                     <!-- Pergunta 8 -->
                     <div class="pergunta">
-                        <p class= itens>8. Carroséis em parques infantis </p>
+                        <p class=itens>8. Carroséis em parques infantis </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta8.2" value="1" id="check8.2">
                             Não aplicável
@@ -494,7 +495,7 @@
 
                     <!-- Pergunta 9 -->
                     <div class="pergunta">
-                        <p class= itens>9. Montanhas Russas, Diversões </p>
+                        <p class=itens>9. Montanhas Russas, Diversões </p>
                         <label class="opcao">
                             <input type="radio" name="pergunta9.2" value="1" id="check9.2">
                             Não aplicável
@@ -516,10 +517,11 @@
                             Frequentemente sentiu enjoos
                         </label><br>
                     </div><br>
-            </div>
-            <div class="divbot">
-                <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
-            </div></p>
+                </div>
+                <div class="divbot">
+                    <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
+                </div>
+                </p>
             </form>
         </div>
     </div>

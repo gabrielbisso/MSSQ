@@ -20,57 +20,59 @@
 </head>
 
 <body>
-    <header class="header"></header>
+    <header class="header">
+        <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/54cb28b31242bde04c9dc771e3c1b5bb2d1f503ae5889d6c05f9df14c1650ef9?placeholderIfAbsent=true&apiKey=ca76908c09d645f09c52cbff3ba78418 [cdn.builder.io]"
+        alt="Motion Sickness Test Logo"
+        class="logo">
+    </header>
     <h1 class="titulo">Medições Físicas e Sinais Vitais <br>para Avaliação de Saúde</h1>
-    <hr class="linha">
-    <form action="{% url 'questionario2' %}" method="POST">{% csrf_token %}
-        <input style="display: none" id="id" type="text" name="id" value="{{ id }}"> 
+    <div class="box">
+        <div class="form">
+            <form action="{% url 'questionario2' %}" method="POST">{% csrf_token %}
+                <input style="display: none" id="id" type="text" name="id" value="{{ id }}"> 
+        
+                <p class="pergunta">1) Por favor, indique a altura (m) </p>
+                <label class="resposta"> 
+                    Altura:</p><input type="text" name="altura" id="caixatexto"><br> 
+                </label>
+        
+                <p class="pergunta"> 2) Por favor, indique a cintura abdominal (cm) </p>
+                <label class="resposta"> 
+                    Cintura abdominal:</p><input type="text" name="cintura"  id="caixatexto"><br>
+                </label>
+        
+                <p class="pergunta"> 3) Por favor, indique o peso (kg) </p>
+                <label class="resposta"> 
+                    Peso:</p> <input type="text" name="peso" id="caixatexto"><br>
+                </label>
+        
+                <p class="pergunta"> 4) Por favor, indique o IMC (kg/m2) </p>
+                <label class="resposta"> 
+                    IMC: </p><input type="text" name="imc" id="caixatexto"><br>
+                </label>
+        
+                <p class="pergunta"> 5) Por favor, indique a pressão arterial (mmHg) </p>
+                <label class="resposta"> 
+                    Pressão arterial:</p><input type="text" name="pressao" id="caixatexto"><br>
+                </label>
 
-        <p class="pergunta">1) Por favor, indique a altura (m) </p>
-        <label class="resposta"> 
-            Altura:</p><input type="text" name="altura" id="caixatexto"><br> 
-        </label>
-        <hr class="linha">
-
-        <p class="pergunta"> 2) Por favor, indique a cintura abdominal (cm) </p>
-        <label class="resposta"> 
-            Cintura abdominal:</p><input type="text" name="cintura"  id="caixatexto"><br>
-        </label>
-        <hr class="linha">
-
-        <p class="pergunta"> 3) Por favor, indique o peso (kg) </p>
-        <label class="resposta"> 
-            Peso:</p> <input type="text" name="peso" id="caixatexto"><br>
-        </label>
-        <hr class="linha">
-
-        <p class="pergunta"> 4) Por favor, indique o IMC (kg/m2) </p>
-        <label class="resposta"> 
-            IMC: </p><input type="text" name="imc" id="caixatexto"><br>
-        </label>
-        <hr class="linha">
-
-        <p class="pergunta"> 5) Por favor, indique a pressão arterial (mmHg) </p>
-        <label class="resposta"> 
-            Pressão arterial:</p><input type="text" name="pressao" id="caixatexto"><br>
-        </label>
-        <hr class="linha">
-
-        <p class="pergunta"> 6) Por favor, indique a oximetria (%) </p>
-        <label class="resposta"> 
-            Oximetria:</p><input type="text" name="oximetria" id="caixatexto"><br>
-        </label>
-        <hr class="linha">
-
-        <p class="pergunta"> 7) Por favor, indique a frequência cardíaca (bpm) </p>
-        <label class="resposta"> 
-            Frequência cardíaca:</p><input type="text" name="frequencia_card" id="caixatexto"><br>
-        </label>
-        <hr class="linha">
-
-        <div class="divbot">
-            <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
-        </div></p>
-    </form>
+                <p class="pergunta"> 6) Por favor, indique a oximetria (%) </p>
+                <label class="resposta"> 
+                    Oximetria:</p><input type="text" name="oximetria" id="caixatexto"><br>
+                </label>
+        
+                <p class="pergunta"> 7) Por favor, indique a frequência cardíaca (bpm) </p>
+                <label class="resposta"> 
+                    Frequência cardíaca:</p><input type="text" name="frequencia_card" id="caixatexto"><br>
+                </label>
+        
+                <div class="divbot">
+                    <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
+                </div></p>
+            </form>
+        </div>
+    </div>
     <footer class="footer"></footer>
 </body>
+</html>
