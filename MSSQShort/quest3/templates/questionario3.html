@@ -23,7 +23,7 @@
     <header class="header"></header>
     <h1 class="titulo">Teste Pós Experimento</h1><br>
     <form action="{% url 'questionario3' %}" method="POST">{% csrf_token %}
-        <input style="display: none" id="credencial" type="text" name="credencial" value="{{ credencial }}">
+        <input style="display: none" id="id" type="text" name="id" value="{{ id }}">
         <p class="sintoma">
            Após o experimento, indique se você apresentou algum sinal ou sintoma abaixo:<br>
         </p>

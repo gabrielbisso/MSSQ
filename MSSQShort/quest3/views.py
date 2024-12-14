@@ -9,7 +9,7 @@ def questionario3(request):
         return render(request, 'questionario3.html')
 
     elif request.method == "POST":
-        id = request.POST.get('credencial')
+        id = request.POST.get('id')
         nausea = request.POST.get('nausea')
         vomito = request.POST.get('vomito')
         tontura = request.POST.get('tontura')
@@ -27,4 +27,4 @@ def questionario3(request):
 
             quest3_envio.save()
 
-        return HttpResponse("oIE moreh")
+        return render(request, 'initial.html')

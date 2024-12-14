@@ -35,12 +35,12 @@ def login_User(request):
         return render(request, 'loginUser.html', {'disable_button1': disable_button, 'disable_button2': disable_button, 'disable_button3': disable_button})
 
     elif request.method == "POST":
-        credencial = request.POST.get('credencial')
+        id = request.POST.get('id')
 
         # Verificando a existência dos registros nos três bancos de dados
-        q1 = banco_quest1.objects.filter(id=credencial).first()
-        q2 = banco_quest2.objects.filter(id=credencial).first()
-        q3 = banco_quest3.objects.filter(id=credencial).first()
+        q1 = banco_quest1.objects.filter(id=id).first()
+        q2 = banco_quest2.objects.filter(id=id).first()
+        q3 = banco_quest3.objects.filter(id=id).first()
 
         # Definindo as variáveis de existência com base na consulta
         q1_exist = q1 is not None
@@ -48,67 +48,67 @@ def login_User(request):
         q3_exist = q3 is not None
 
         # Se a credencial estiver vazia, desabilita todos os botões
-        if credencial == "":
+        if id == "":
             disable_button = True
             return render(request, 'loginUser.html', {
                 'disable_button1': disable_button,
                 'disable_button2': disable_button,
                 'disable_button3': disable_button,
-                'credencial': credencial
+                'id': id
             })
 
         # Se q1 não existe, desabilita o botão correspondente
         elif not q1_exist:
-            credencialglobal = credencial
+            credencialglobal = id
             disable_buttonfalse = False
             disable_button = True
             return render(request, 'loginUser.html', {
                 'disable_button1': disable_buttonfalse,
                 'disable_button2': disable_button,
                 'disable_button3': disable_button,
-                'credencial': credencial
+                'id': id
             })
 
         # Se q1 existe mas q2 não, desabilita o botão de q2
         elif q1_exist and not q2_exist:
-            credencialglobal = credencial
+            credencialglobal = id
             disable_buttonfalse = False
             disable_button = True
             return render(request, 'loginUser.html', {
                 'disable_button1': disable_button,
                 'disable_button2': disable_buttonfalse,
                 'disable_button3': disable_button,
-                'credencial': credencial
+                'id': id
             })
 
         # Se q2 existe mas q3 não, desabilita o botão de q3
         elif q2_exist and not q3_exist:
-            credencialglobal = credencial
+            credencialglobal = id
             disable_buttonfalse = False
             disable_button = True
             return render(request, 'loginUser.html', {
                 'disable_button1': disable_button,
                 'disable_button2': disable_button,
                 'disable_button3': disable_buttonfalse,
-                'credencial': credencial
+                'id': id
             })
 
         # Se todos os questionários existem, exibe uma mensagem
         elif q3_exist:
-            credencialglobal = credencial
+            credencialglobal = id
             return HttpResponse("Você já preencheu todos os questionários")
 
 
 def quest1(request):
-    return render(request, 'questionario1.html', {'credencial': credencialglobal})
+    return render(request, 'questionario1.html', {'id': credencialglobal})
 
 
 def quest2(request):
-    return render(request, 'questionario2.html', {'credencial': credencialglobal})
+    return render(request, 'questionario2.html', {'id': credencialglobal})
 
 
 def quest3(request):
-    return render(request, 'questionario3.html', {'credencial': credencialglobal})
+    return render(request, 'questionario3.html', {'id': credencialglobal})
 
 
 def resultados(request):

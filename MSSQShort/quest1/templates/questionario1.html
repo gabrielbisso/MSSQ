@@ -26,8 +26,8 @@
     </header>
     <div class="box">
         <div class="formulario">
-           <form class="form" id="formulario" action="{% url 'questionario1' %}" method="POST">{% csrf_token %}
-                <!-- <input style="display: none" id="credencial" type="text" name="credencial" value="{{ credencial }}"> -->
+           <form action="{% url 'questionario1' %}" method="POST">{% csrf_token %}
+                <input style="display: none" id="id" type="text" name="id" value="{{ id }}">
             <div>
                     <h2>Informações Pessoais</h2>
                     <p class="idadep">Por favor, indique a sua idade:</p>
@@ -36,11 +36,11 @@
                     </label>
                     <p class="sexo"> Por favor, indique seu sexo: </p>
                     <label class="sexol">
-                        <input type="radio" name="sexo" value="Masculino" id="sexoMasculino">
+                        <input type="radio" name="sexo" value="1" id="sexoMasculino">
                         Masculino
                     </label><br>
                     <label class="sexol">
-                        <input type="radio" name="sexo" value="Feminino" id="sexoFeminino">
+                        <input type="radio" name="sexo" value="2" id="sexoFeminino">
                         Feminino
                     </label><br>
         
@@ -517,9 +517,9 @@
                         </label><br>
                     </div><br>
             </div>
-                <div>
-                <button type="submit" id="botao" class="btn login_btn button">Enviar Respostas</button>
-                </div>
+            <div class="divbot">
+                <button type="submit" name="button" class="btn login_btn" id="botao"> Enviar Respostas</button>
+            </div></p>
             </form>
         </div>
     </div>

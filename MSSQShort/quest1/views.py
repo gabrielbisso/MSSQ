@@ -4,13 +4,12 @@ from django.contrib import messages
 from .models import banco_quest1
 
 
-def quest1(request):
+def questionario1(request):
     if request.method == "GET":
         return render(request, 'questionario1.html')
 
     elif request.method == "POST":
-        print("EJTREI AQUI")
-        id = request.POST.get('credencial')
+        id = request.POST.get('id')
         idade = request.POST.get('idade')
         sexo = request.POST.get('sexo')
         carros = request.POST.get('pergunta1')
@@ -37,4 +36,4 @@ def quest1(request):
                                         comboios=comboios, avioes=avioes, embarcacao_pequena=embarcacao_pequena, navios=navios, baloicos=baloicos, carroseis=carroseis, montanha_russa=montanha_russa, carros2=carros2, autocarros2=autocarros2, comboios2=comboios2, avioes2=avioes2, embarcacao_pequena2=embarcacao_pequena2, navios2=navios2, baloicos2=baloicos2, carroseis2=carroseis2, montanha_russa2=montanha_russa2)
             quest1_envio.save()
 
-        return HttpResponse("FOIE")
+        return render(request, 'questionario2.html', {"id": id})
