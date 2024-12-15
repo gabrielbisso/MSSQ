@@ -118,41 +118,24 @@
   border: 1px solid transparent;
 }
 
-.team-members {
-  display: flex;
-  margin-top: 20px;
-}
-
-.member-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  gap: 20px;
-}
-
-.member-col {
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-}
-
-.member-avatar {
-  background-color: #04153b;
-  border-radius: 50%;
-  width: 130px;
-  height: 130px;
-  margin: 0 auto;
-}
-
-.member-name {
-  color: #fff;
+.team-list {
+  list-style: none;  /*tira as bolinhas da lista*/
+  padding: 0; 
+  margin: 0;
   text-align: center;
-  margin-top: 10px;
-  font: 400 20px Inter, sans-serif;
+}
+
+.team-list li {
+  color: #fff; 
+  font-size: 18px; 
+  margin: 8px 0; 
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
 }
 
 .logo-ufcspa {
   width: 150px;
+  object-position: center;
   height: auto;
   margin: 0 auto;
 }
@@ -231,29 +214,6 @@
     max-width: 100%;
     margin-top: 40px;
     padding: 0 20px;
-  }
-
-  .team-members {
-    max-width: 100%;
-    margin-top: 40px;
-  }
-
-  .member-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-
-  .member-col {
-    width: 100%;
-  }
-
-  .member-avatar {
-    margin-top: 27px;
-  }
-
-  .member-name {
-    margin-top: 40px;
   }
 
   .project-description {
